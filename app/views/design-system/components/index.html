@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Getting started
+{% endblock %}
+
+{% block heroClass %}
+gc-header-hero
+{% endblock %}
+
+{% block heroContent %}
+<nav class="app-navigation govuk-clearfix">
+    <ul class="app-navigation__list govuk-width-container">
+
+
+        <li class="app-navigation__list-item">
+            <a class="govuk-link govuk-link--no-visited-state app-navigation__link" href="/design-system/styles/"
+                data-topnav="Styles">Styles</a>
+        </li>
+
+        <li class="app-navigation__list-item app-navigation__list-item--current">
+            <a class="govuk-link govuk-link--no-visited-state app-navigation__link" href="/design-system/components/"
+                data-topnav="Components">Components</a>
+        </li>
+
+        <li class="app-navigation__list-item">
+            <a class="govuk-link govuk-link--no-visited-state app-navigation__link" href="/design-system/patterns/"
+                data-topnav="Patterns">Patterns</a>
+        </li>
+
+
+
+    </ul>
+</nav>
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+
+
+    <div class="app-pane__body govuk-width-container">
+        <div class="app-pane__subnav app-hide-mobile">
+            {% include "../../includes/component-nav.html" %}
+        </div>
+
+        <div class="app-pane__content">
+            <h1 class="govuk-heading-l">Components</h1>
+            <p class="govuk-body">Components are reusable parts of the user interface that have been made to support a
+                variety of applications.</p>
+
+            <p class="govuk-body">Individual components can be used in multiple different patterns and contexts. For
+                example, the text input component can be used to ask for an email address, a National Insurance number
+                or someone’s name.</p>
+
+            <p class="govuk-body">If you are using the GC Prototype Kit or have GC Frontend included in your build, the
+                coded examples provided will render exactly as they do inside the Design System.</p>
+
+        </div>
+
+    </div>
+
+</div>
+{% endblock %}

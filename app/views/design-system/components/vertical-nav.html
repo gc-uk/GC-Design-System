@@ -1,0 +1,129 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Getting started
+{% endblock %}
+
+{% block heroClass %}
+gc-header-hero
+{% endblock %}
+
+{% block heroContent %}
+<nav class="app-navigation govuk-clearfix">
+    <ul class="app-navigation__list govuk-width-container">
+
+
+        <li class="app-navigation__list-item">
+            <a class="govuk-link govuk-link--no-visited-state app-navigation__link" href="/design-system/styles/"
+                data-topnav="Styles">Styles</a>
+        </li>
+
+        <li class="app-navigation__list-item app-navigation__list-item--current">
+            <a class="govuk-link govuk-link--no-visited-state app-navigation__link" href="/design-system/components/"
+                data-topnav="Components">Components</a>
+        </li>
+
+        <li class="app-navigation__list-item">
+            <a class="govuk-link govuk-link--no-visited-state app-navigation__link" href="/design-system/patterns/"
+                data-topnav="Patterns">Patterns</a>
+        </li>
+
+
+    </ul>
+</nav>
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+
+    <div class="app-pane__body govuk-width-container">
+        <div class="app-pane__subnav app-hide-mobile">
+            {% include "../../includes/component-nav.html" %}
+        </div>
+
+        <div class="app-pane__content">
+            <h1 class="govuk-heading-xl">Vertical navigation</h1>
+            <p class="govuk-body">
+                Use the vertical navigation to allow users to access different sections or pages in relation the current
+                page.
+            </p>
+
+            <div class="govuk-tabs" data-module="govuk-tabs">
+                <h2 class="govuk-tabs__title">
+                    Example
+                </h2>
+                <ul class="govuk-tabs__list">
+                    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                        <a class="govuk-tabs__tab" href="#past-day">
+                            Example
+                        </a>
+                    </li>
+                    <li class="govuk-tabs__list-item">
+                        <a class="govuk-tabs__tab" href="#past-week">
+                            Code
+                        </a>
+                    </li>
+
+                </ul>
+                <section class="govuk-tabs__panel" id="past-day">
+
+                    <nav class="gc-vertical-nav">
+                        <ul class="gc-vertical-nav__section">
+                            <li class="gc-vertical-nav__section-item {{alert-c-nav-active}}">
+                                <a class="gc-vertical-nav__link " href="#">Alert</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                </section>
+                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week">
+                    <div class="app-tabs__container">
+                        <pre>
+                            <code class="html">
+&#x3C;nav class=&#x22;gc-vertical-nav&#x22;&#x3E;
+&#x3C;ul class=&#x22;gc-vertical-nav__section&#x22;&#x3E;
+
+    &#x3C;li class=&#x22;gc-vertical-nav__section-item {{alert-c-nav-active}}&#x22;&#x3E;
+        &#x3C;a class=&#x22;gc-vertical-nav__link &#x22; href=&#x22;#&#x22;&#x3E;Alert&#x3C;/a&#x3E;
+    &#x3C;/li&#x3E;
+&#x3C;/ul&#x3E;
+&#x3C;/nav&#x3E;
+                        </code>
+                    </pre>
+                    </div>
+                </section>
+
+            </div>
+
+
+            <h2 class="govuk-heading-l">When to use this component</h2>
+            <p class="govuk-body">
+                [tk]
+            </p>
+
+            <h2 class="govuk-heading-l">When not to use this component</h2>
+            <p class="govuk-body">
+                [tk]
+            </p>
+
+            <h2 class="govuk-heading-l">How it works</h2>
+            <p class="govuk-body">
+                [tk]
+            </p>
+
+            <h2 class="govuk-heading-l">Research on this component</h2>
+            <p class="govuk-body">
+                [tk]
+            </p>
+
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

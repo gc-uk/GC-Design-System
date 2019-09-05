@@ -1,0 +1,76 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Getting started
+{% endblock %}
+
+{% block heroClass %}
+gc-header-hero
+{% endblock %}
+
+{% block heroContent %}
+
+<section class="gc-hero gc-hero--image gc-hero--image-description govuk-!-padding-bottom-4">
+
+  <div class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l govuk-!-margin-bottom-3 govuk-!-margin-top-7">Design System</h1>
+        <p class="govuk-body-l">The design system is a collection of styles, components and patterns to build consistent services for the Gambling Commission.</p>
+<p class="govuk-body">These should be used alongside the GOV.UK Design System.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="govuk-grid-row gc-promo-group">
+ 
+  <div class="govuk-grid-column-one-third gc-promo-group__item">
+    <div class="gc-promo app-promo--grey">
+      <a class="gc-promo__link-wrapper" href="/design-system/styles/">
+
+        <div class="gc-promo__content">
+          <h2 class="govuk-heading-s govuk-!-margin-bottom-2">Styles
+          </h2>
+          <p class="gc-promo__description">Use of colors, images, layout and typography</p>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-third gc-promo-group__item">
+    <div class="gc-promo app-promo--grey">
+        <a class="gc-promo__link-wrapper" href="/design-system/components/">
+
+        <div class="gc-promo__content">
+          <h2 class="govuk-heading-s govuk-!-margin-bottom-2">Components
+          </h2>
+          <p class="gc-promo__description">Reusable, accessible components for forms, navigation, tables and more</p>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div class="govuk-grid-column-one-third gc-promo-group__item">
+    <div class="gc-promo app-promo--grey">
+        <a class="gc-promo__link-wrapper" href="/design-system/patterns/">
+
+        <div class="gc-promo__content">
+          <h2 class="govuk-heading-s govuk-!-margin-bottom-2">Patterns
+          </h2>
+          <p class="gc-promo__description">Patterns for common tasks like uploading files, entering information or creating accounts</p>
+        </div>
+      </a>
+    </div>
+  </div>
+
+ 
+</div>
+
+{% endblock %}
