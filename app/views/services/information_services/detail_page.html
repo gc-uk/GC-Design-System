@@ -1,0 +1,99 @@
+{% extends "layout.html" %}
+
+{% set detail_page = detail_page.items[0] %}
+
+{% block pageTitle %}
+{{detail_page.fields.title}}
+{% endblock %}
+
+{% block pageDescription %}
+{{detail_page.fields.summary}}
+{% endblock %}
+
+{% block pageMeta %}
+<meta property="og:type" content="summary" />
+<meta property="og:title" content="{{detail_page.fields.title}}" />
+<meta property="og:description" content="{{detail_page.fields.summary}}" />
+{% endblock %}
+
+{% block heroClass %}
+{% endblock %}
+
+{% block heroContent %}
+{% endblock %}
+
+{% block beforeContent %}
+<a href="/information_services/" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+            <nav class="gc-vertical-nav">
+                <ul class="gc-vertical-nav__section">
+                    {% for i in list_of_information_services.items %}
+
+                    {% if i.fields.title === detail_page.fields.title %}
+                    <li class="gc-vertical-nav__section-item gc-vertical-nav__section-item--current">
+                        <a class="gc-vertical-nav__link govuk-link"
+                            href="/information_services/detail_page/{{ i.fields.slug }}">{{i.fields.title}}</a>
+                    </li>
+                    {% else %}
+                    <li class="gc-vertical-nav__section-item">
+                        <a class="gc-vertical-nav__link govuk-link"
+                            href="/information_services/detail_page/{{ i.fields.slug }}">{{i.fields.title}}</a>
+                    </li>
+                    {% endif %}
+                    {%endfor%}
+                </ul>
+            </nav>
+        </div>
+
+        <div class="govuk-grid-column-two-thirds">
+
+            {% if detail_page.fields.legacy === true %}
+            <span>
+                <strong class="govuk-tag govuk-phase-banner__content__tag govuk-!-margin-bottom-3">
+                    Legacy
+                </strong>
+            </span>
+            
+            {% endif %}
+
+            <h1 class="govuk-heading-l">{{detail_page.fields.title}}</h1>
+            <hr class="govuk-section-break govuk-section-break--m govuk-section-break--invisible">
+
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-one-third">
+                    <h2 class="govuk-heading-s govuk-!-margin-bottom-2">Product Owner</h2>
+                    <p class="govuk-body">{{detail_page.fields.productOwner}}</p>
+                </div>
+                <div class="govuk-grid-column-one-third">
+                    <h2 class="govuk-heading-s govuk-!-margin-bottom-2">Service Owner</h2>
+                    <p class="govuk-body">{{detail_page.fields.serviceOwner}}</p>
+                </div>
+                <div class="govuk-grid-column-one-third">
+                    <h2 class="govuk-heading-s govuk-!-margin-bottom-2">Business Area</h2>
+                    <p class="govuk-body">{{detail_page.fields.businessArea}}</p>
+                </div>
+            </div>
+            <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+            <h2 class="govuk-heading-m govuk-!-margin-top-5">Summary</h2>
+            <p class="govuk-body">{% markdown %}{{detail_page.fields.summary |safe}}{%endmarkdown%}</p>
+
+            <h2 class="govuk-heading-m govuk-!-margin-top-5">User stories</h2>
+            <p class="govuk-body">{% markdown %}{{detail_page.fields.userStories |safe}}{%endmarkdown%}</p>
+
+            <h2 class="govuk-heading-m govuk-!-margin-top-5">Features</h2>
+            <p class="govuk-body">{% markdown %}{{detail_page.fields.features |safe}}{%endmarkdown%}</p>
+
+            <h2 class="govuk-heading-m govuk-!-margin-top-5">Links</h2>
+            <p class="govuk-body">{% markdown %}{{detail_page.fields.links | safe}}{%endmarkdown%}</p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

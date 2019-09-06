@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Information services
+{% endblock %}
+
+{% block beforeContent %}
+<a href="/" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">
+      Information Services
+      <hr class="govuk-section-break govuk-section-break--invisible">
+    </h1>
+
+    <p> Information services cover:</p>
+
+    <h2 class="govuk-heading-m">
+      Active services
+      <hr class="govuk-section-break govuk-section-break--invisible">
+    </h2>
+
+    <div class="govuk-grid-row">
+      <div class="gc-promo-group">
+        {% for i in information_services.items %}
+        {% if i.fields.legacy === false %}
+
+        <div class="govuk-grid-column-full gc-promo-group__item">
+          <div class="gc-promo app-promo--grey">
+            <a class="gc-promo__link-wrapper" href="/information_services/detail_page/{{ i.fields.slug }}">
+              <div class="gc-promo__content">
+                <h3 class="govuk-heading-s govuk-!-margin-bottom-2">{{i.fields.title}}</h3>
+                <p class="gc-promo__description">{{i.fields.shortDescription}}</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+
+        {% for i in information_services.items %}
+        {% if i.fields.legacy === true %}
+
+        <div class="govuk-grid-column-two-thirds">
+          <h2 class="govuk-heading-m govuk-!-margin-top-5">
+            Legacy services
+            <hr class="govuk-section-break govuk-section-break--invisible">
+          </h2>
+        </div>
+
+        <div class="govuk-grid-column-full gc-promo-group__item">
+          <div class="gc-promo app-promo--grey">
+            <a class="gc-promo__link-wrapper" href="/information_services/detail_page/{{ i.fields.slug }}">
+              <div class="gc-promo__content">
+                <h3 class="govuk-heading-s govuk-!-margin-bottom-2">{{i.fields.title}}</h3>
+                <p class="gc-promo__description">{{i.fields.shortDescription}}</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  <div class="govuk-grid-column-one-third"></div>
+</div>
+</div>
+
+{% endblock %}

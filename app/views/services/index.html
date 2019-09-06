@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Service catalogue
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">
+          Service catalogue
+        </h1>
+
+        <p>Our service catalogue covers the following areas:</p>
+        
+        <div class="govuk-grid-row">
+          {% for i in service_catalogue.items %}
+
+          <div class="govuk-grid-column-full gc-promo-group__item">
+            <div class="gc-promo app-promo--grey">
+              <a class="gc-promo__link-wrapper" href="services/{{ i.fields.slug }}">
+                <div class="gc-promo__content">
+                  <h3 class="govuk-heading-s govuk-!-margin-bottom-2">{{i.fields.title}}</h3>
+                  <p class="gc-promo__description">{{i.fields.shortDescription}}</p>
+                </div>
+              </a>
+
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+  </main>
+</div>
+
+
+
+{% endblock %}
