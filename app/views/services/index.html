@@ -4,6 +4,10 @@
 Service catalogue
 {% endblock %}
 
+{% block beforeContent %}
+<a href="/" class="govuk-back-link">Back</a>
+{% endblock %}
+
 {% block content %}
 
 <div class="govuk-width-container">
@@ -22,7 +26,7 @@ Service catalogue
 
           <div class="govuk-grid-column-full gc-promo-group__item">
             <div class="gc-promo app-promo--grey">
-              <a class="gc-promo__link-wrapper" href="services/{{ i.fields.slug }}">
+              <a class="gc-promo__link-wrapper" href="/{{ i.fields.slug }}">
                 <div class="gc-promo__content">
                   <h3 class="govuk-heading-s govuk-!-margin-bottom-2">{{i.fields.title}}</h3>
                   <p class="gc-promo__description">{{i.fields.shortDescription}}</p>

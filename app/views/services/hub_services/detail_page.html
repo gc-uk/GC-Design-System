@@ -23,7 +23,7 @@
 {% endblock %}
 
 {% block beforeContent %}
-<a href="services/hub_services/" class="govuk-back-link">Back</a>
+<a href="/hub_services" class="govuk-back-link">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -38,12 +38,12 @@
                     {% if i.fields.title === detail_page.fields.title %}
                     <li class="gc-vertical-nav__section-item gc-vertical-nav__section-item--current">
                         <a class="gc-vertical-nav__link govuk-link"
-                            href="services/hub_services/detail_page/{{ i.fields.slug }}">{{i.fields.title}}</a>
+                            href="/hub_services/detail_page/{{ i.fields.slug }}">{{i.fields.title}}</a>
                     </li>
                     {% else %}
                     <li class="gc-vertical-nav__section-item">
                         <a class="gc-vertical-nav__link govuk-link"
-                            href="services/hub_services/detail_page/{{ i.fields.slug }}">{{i.fields.title}}</a>
+                            href="/hub_services/detail_page/{{ i.fields.slug }}">{{i.fields.title}}</a>
                     </li>
                     {% endif %}
                     {%endfor%}

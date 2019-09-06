@@ -5,7 +5,7 @@ Hub services
 {% endblock %}
 
 {% block beforeContent %}
-<a href="/" class="govuk-back-link">Back</a>
+<a href="/services" class="govuk-back-link">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -30,7 +30,7 @@ Hub services
 
         <div class="govuk-grid-column-full gc-promo-group__item">
           <div class="gc-promo app-promo--grey">
-            <a class="gc-promo__link-wrapper" href="/services/hub_services/detail_page/{{ i.fields.slug }}">
+            <a class="gc-promo__link-wrapper" href="/hub_services/detail_page/{{ i.fields.slug }}">
               <div class="gc-promo__content">
                 <h3 class="govuk-heading-s govuk-!-margin-bottom-2">{{i.fields.title}}</h3>
                 <p class="gc-promo__description">{{i.fields.shortDescription}}</p>
@@ -53,7 +53,7 @@ Hub services
 
         <div class="govuk-grid-column-full gc-promo-group__item">
           <div class="gc-promo app-promo--grey">
-            <a class="gc-promo__link-wrapper" href="/services/hub_services/detail_page/{{ i.fields.slug }}">
+            <a class="gc-promo__link-wrapper" href="/hub_services/detail_page/{{ i.fields.slug }}">
               <div class="gc-promo__content">
                 <h3 class="govuk-heading-s govuk-!-margin-bottom-2">{{i.fields.title}}</h3>
                 <p class="gc-promo__description">{{i.fields.shortDescription}}</p>
