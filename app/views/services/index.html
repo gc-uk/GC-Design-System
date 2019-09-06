@@ -4,8 +4,24 @@
 Service catalogue
 {% endblock %}
 
-{% block beforeContent %}
-<a href="/" class="govuk-back-link">Back</a>
+{% block heroClass %}
+gc-header-hero
+{% endblock %}
+
+{% block heroContent %}
+
+<section class="gc-hero gc-hero--image gc-hero--image-description govuk-!-padding-bottom-4">
+
+  <div class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l govuk-!-margin-bottom-3 govuk-!-margin-top-7">Service catalogue</h1>
+        <p class="govuk-body-l">Our service catalogue covers the following areas:</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 {% endblock %}
 
 {% block content %}
@@ -15,15 +31,7 @@ Service catalogue
 
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-xl">
-          Service catalogue
-        </h1>
-
-        <p>Our service catalogue covers the following areas:</p>
-        
-        <div class="govuk-grid-row">
           {% for i in service_catalogue.items %}
-
           <div class="govuk-grid-column-full gc-promo-group__item">
             <div class="gc-promo app-promo--grey">
               <a class="gc-promo__link-wrapper" href="/{{ i.fields.slug }}">
@@ -32,11 +40,9 @@ Service catalogue
                   <p class="gc-promo__description">{{i.fields.shortDescription}}</p>
                 </div>
               </a>
-
             </div>
           </div>
           {% endfor %}
-        </div>
       </div>
   </main>
 </div>

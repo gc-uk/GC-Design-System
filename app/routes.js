@@ -4,7 +4,7 @@ const router = express.Router()
 // Add your routes here - above the module.exports line
 
 var componentsController = require('./controllers/componentController.js')
-var coreController = require('./controllers/coreController.js')
+var servicesController = require('./controllers/servicesController.js')
 var hubServicesController = require('./controllers/hubServicesController.js')
 var informationServicesController = require('./controllers/informationServicesController.js')
 var transactionalServicesController = require('./controllers/transactionalServicesController.js')
@@ -15,7 +15,7 @@ router.get('/design-system/components/vertical-nav', componentsController.vertic
 
 // Design system
 
-router.get('/services/', coreController.services_catalogue_get);
+router.get('/services/', servicesController.services_catalogue_get);
 
 // Hub services
 router.get('/hub_services/', hubServicesController.hub_services_get);
