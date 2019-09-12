@@ -4,6 +4,8 @@ const router = express.Router()
 // Add your routes here - above the module.exports line
 
 var componentsController = require('./controllers/componentController.js')
+var patternsController = require('./controllers/patternsController.js')
+var stylesController = require('./controllers/stylesController.js')
 var servicesController = require('./controllers/servicesController.js')
 var hubServicesController = require('./controllers/hubServicesController.js')
 var informationServicesController = require('./controllers/informationServicesController.js')

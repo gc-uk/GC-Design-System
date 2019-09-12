@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Getting started
+{% endblock %}
+
+{% block heroClass %}
+gc-header-hero
+{% endblock %}
+
+{% block heroContent %}
+<nav class="app-navigation govuk-clearfix">
+    <ul class="app-navigation__list govuk-width-container">
+
+
+        <li class="app-navigation__list-item app-navigation__list-item--current">
+            <a class="govuk-link govuk-link--no-visited-state app-navigation__link" href="/design-system/styles/"
+                data-topnav="Styles">Styles</a>
+        </li>
+
+        <li class="app-navigation__list-item">
+            <a class="govuk-link govuk-link--no-visited-state app-navigation__link" href="/design-system/components/"
+                data-topnav="Components">Components</a>
+        </li>
+
+        <li class="app-navigation__list-item">
+            <a class="govuk-link govuk-link--no-visited-state app-navigation__link" href="/design-system/patterns/"
+                data-topnav="Patterns">Patterns</a>
+        </li>
+
+
+
+    </ul>
+</nav>
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+
+
+    <div class="app-pane__body govuk-width-container">
+        <div class="app-pane__subnav app-hide-mobile">
+            {% include "../../includes/component-nav.html" %}
+        </div> 
+
+        <div class="app-pane__content">
+            <h1 class="govuk-heading-l">Styles</h1>
+            <p class="govuk-body">text here</p>
+        </div>
+
+    </div>
+
+</div>
+{% endblock %}
