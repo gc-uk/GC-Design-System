@@ -12,11 +12,27 @@ var informationServicesController = require('./controllers/informationServicesCo
 var transactionalServicesController = require('./controllers/transactionalServicesController.js')
 var webServicesController = require('./controllers/webServicesController.js')
 
-
+// Design system
+// Components
+router.get('/design_system/components/alerts', componentsController.alerts);
+router.get('/design_system/components/beta-banner', componentsController.beta);
+router.get('/design_system/components/currency', componentsController.currency);
+router.get('/design_system/components/expander', componentsController.expander);
+router.get('/design_system/components/footer', componentsController.footer);
+router.get('/design_system/components/header', componentsController.header);
+router.get('/design_system/components/hero', componentsController.hero);
+router.get('/design_system/components/interruption-card', componentsController.interruption);
+router.get('/design_system/components/promo-cards', componentsController.promo);
+router.get('/design-system/components/search', componentsController.search);
+router.get('/design-system/components/tags', componentsController.tags);
 router.get('/design-system/components/vertical-nav', componentsController.vertical_nav);
 
-// Design system
+// Patterns
 
+// Styles
+
+
+// Services
 router.get('/services/', servicesController.services_catalogue_get);
 
 // Hub services
