@@ -3,14 +3,15 @@ const router = express.Router()
 
 // Add your routes here - above the module.exports line
 
-var componentsController = require('./controllers/componentController.js')
-var patternsController = require('./controllers/patternsController.js')
-var stylesController = require('./controllers/stylesController.js')
 var servicesController = require('./controllers/servicesController.js')
 var hubServicesController = require('./controllers/hubServicesController.js')
 var informationServicesController = require('./controllers/informationServicesController.js')
 var transactionalServicesController = require('./controllers/transactionalServicesController.js')
 var webServicesController = require('./controllers/webServicesController.js')
+var componentsController = require('./controllers/componentController.js')
+var patternsController = require('./controllers/patternsController.js')
+var stylesController = require('./controllers/stylesController.js')
+var contentController = require('./controllers/contentController.js')
 
 // Design system
 // Components
@@ -52,5 +53,13 @@ router.get('/transactional_services/detail_page/:id', transactionalServicesContr
 router.get('/web_services/', webServicesController.web_services_get);
 router.get('/web_services/detail_page/:id', webServicesController.web_services_detail_page_get);
 
+// Content 
+router.get('/content/', contentController.index_get);
+router.get('/content/a-z', contentController.az_get);
+router.get('/content/audience', contentController.audience_get);
+router.get('/content/controlled-language', contentController.controlled_language_get);
+router.get('/content/emails-and-text-messages', contentController.emails_and_texts_get);
+router.get('/content/key-styles', contentController.key_styles_get);
+router.get('/content/tools', contentController.tools_get);
 
 module.exports = router

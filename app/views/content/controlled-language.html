@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Content
+{% endblock %}
+
+{% block heroClass %}
+
+{% endblock %}
+
+{% block heroContent %}
+
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+
+
+    <div class="app-pane__body govuk-width-container">
+        <div class="app-pane__subnav app-hide-mobile">
+            {% include "../includes/content-nav.html" %}
+        </div>
+
+        <div class="app-pane__content">
+            <h1 class="govuk-heading-l">Controlled language</h1>           
+
+            <p class="govuk-body">Controlled language: Microcopy used in services, eg: Start, Save and continue, Sign in, Log out, Create an account, Add another </p>
+        </div>
+
+    </div>
+
+</div>
+{% endblock %}

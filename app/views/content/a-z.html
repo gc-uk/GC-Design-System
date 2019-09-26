@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Content
+{% endblock %}
+
+{% block heroClass %}
+
+{% endblock %}
+
+{% block heroContent %}
+
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+
+
+    <div class="app-pane__body govuk-width-container">
+        <div class="app-pane__subnav app-hide-mobile">
+            {% include "../includes/content-nav.html" %}
+        </div>
+
+        <div class="app-pane__content">
+            <h1 class="govuk-heading-l">A - Z </h1>           
+          
+            <p class="govuk-body">A-Z: Terms used by the GC and the user alternatives; eg: "Operator" - "Gambling Business" - Do this as a heading for the A-Z item, a description and then the user alternative term</p>
+
+        </div>
+
+    </div>
+
+</div>
+{% endblock %}
