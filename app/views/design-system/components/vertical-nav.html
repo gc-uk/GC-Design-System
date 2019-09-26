@@ -13,21 +13,7 @@ gc-header-hero
     <ul class="app-navigation__list govuk-width-container">
 
 
-        <li class="app-navigation__list-item">
-            <a class="govuk-link govuk-link--no-visited-state app-navigation__link" href="/design-system/styles/"
-                data-topnav="Styles">Styles</a>
-        </li>
-
-        <li class="app-navigation__list-item app-navigation__list-item--current">
-            <a class="govuk-link govuk-link--no-visited-state app-navigation__link" href="/design-system/components/"
-                data-topnav="Components">Components</a>
-        </li>
-
-        <li class="app-navigation__list-item">
-            <a class="govuk-link govuk-link--no-visited-state app-navigation__link" href="/design-system/patterns/"
-                data-topnav="Patterns">Patterns</a>
-        </li>
-
+        {% include "../../includes/design-main-nav.html" %}
 
     </ul>
 </nav>
@@ -83,18 +69,7 @@ gc-header-hero
                 </section>
                 <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week">
                     <div class="app-tabs__container">
-                        <pre>
-                            <code class="html">
-&#x3C;nav class=&#x22;gc-vertical-nav&#x22;&#x3E;
-&#x3C;ul class=&#x22;gc-vertical-nav__section&#x22;&#x3E;
-
-    &#x3C;li class=&#x22;gc-vertical-nav__section-item {{alert-c-nav-active}}&#x22;&#x3E;
-        &#x3C;a class=&#x22;gc-vertical-nav__link &#x22; href=&#x22;#&#x22;&#x3E;Alert&#x3C;/a&#x3E;
-    &#x3C;/li&#x3E;
-&#x3C;/ul&#x3E;
-&#x3C;/nav&#x3E;
-                        </code>
-                    </pre>
+                        <pre><code class="html"></code></pre>
                     </div>
                 </section>
 

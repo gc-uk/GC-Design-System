@@ -1,0 +1,223 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Getting started
+{% endblock %}
+
+{% block heroClass %}
+gc-header-hero
+{% endblock %}
+
+{% block heroContent %}
+<nav class="app-navigation govuk-clearfix">
+    <ul class="app-navigation__list govuk-width-container">
+        {% include "../../includes/design-main-nav.html" %}
+    </ul>
+</nav>
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+
+
+    <div class="app-pane__body govuk-width-container">
+        <div class="app-pane__subnav app-hide-mobile">
+            {% include "../../includes/component-nav.html" %}
+        </div>
+
+        <div class="app-pane__content">
+            <h1 class="govuk-heading-xl">Notifications</h1>
+            <p class="govuk-body">
+                Brings important information to the user's attention.
+            </p>
+            <div class="govuk-inset-text">
+                This pattern is used instead of the GOV.UK Design System <a
+                    href="https://design-system.service.gov.uk/components/panel/" target="_Blank">panel
+                    component</a> (link opens in a new window)
+            </div>
+
+            <p class="govuk-body">
+                It is derived from the GOV.UK Design System <a
+                    href="https://design-system.service.gov.uk/components/error-summary/" target="_Blank">error
+                    component</a> (link opens in a new window)
+            </p>
+
+            <h2 class="govuk-heading-m">Variations of this component</h2>
+            <p class="govuk-body">
+                There are 2 variations of this component.
+            </p>
+
+            <div class="govuk-tabs" data-module="govuk-tabs">
+                <h2 class="govuk-tabs__title">
+                    Contents
+                </h2>
+                <ul class="govuk-tabs__list">
+                    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                        <a class="govuk-tabs__tab" href="#info-example">
+                            Example
+                        </a>
+                    </li>
+                    <li class="govuk-tabs__list-item">
+                        <a class="govuk-tabs__tab" href="#info-code">
+                            Code
+                        </a>
+                    </li>
+                </ul>
+                <section class="govuk-tabs__panel" id="info-example">
+                    <div class="gc-notification gc-notification--info">
+                        <h2 class="govuk-heading-m">Information</h2>
+                        <p class="govuk-body">Used when the user needs to be made aware of something they need to do.
+                        </p>
+                    </div>
+                </section>
+                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="info-code">
+                    <pre><code class="html">&#x3C;div class=&#x22;gc-notification gc-notification--info&#x22;&#x3E;
+    &#x3C;h2 class=&#x22;govuk-heading-m&#x22;&#x3E;Information&#x3C;/h2&#x3E;
+    &#x3C;p class=&#x22;govuk-body&#x22;&#x3E;Used when the user needs to be made aware of something they need to do.&#x3C;/p&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+                </section>
+            </div>
+
+
+            <div class="govuk-tabs" data-module="govuk-tabs">
+                <h2 class="govuk-tabs__title">
+                    Contents
+                </h2>
+                <ul class="govuk-tabs__list">
+                    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                        <a class="govuk-tabs__tab" href="#success-example">
+                            Example
+                        </a>
+                    </li>
+                    <li class="govuk-tabs__list-item">
+                        <a class="govuk-tabs__tab" href="#success-code">
+                            Code
+                        </a>
+                    </li>
+                </ul>
+                <section class="govuk-tabs__panel" id="success-example">
+
+                    <div class="gc-notification gc-notification--success">
+                        <h2 class="govuk-heading-m">Success</h2>
+                        <p class="govuk-body">Used when the user needs to be told that they have completed something.
+                        </p>
+                    </div>
+                </section>
+                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="success-code">
+                    <pre><code class="html">&#x3C;div class=&#x22;gc-notification gc-notification--success&#x22;&#x3E;
+    &#x3C;h2 class=&#x22;govuk-heading-m&#x22;&#x3E;Information&#x3C;/h2&#x3E;
+    &#x3C;p class=&#x22;govuk-body&#x22;&#x3E;Used when the user needs to be made aware of something they need to do.&#x3C;/p&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+                </section>
+            </div>
+
+
+
+
+
+            <h2 class="govuk-heading-m">When to use this component</h2>
+            <p class="govuk-body">
+                This component is used when a user needs to be made aware of something they need to complete or that
+                something has happened. For example:
+            </p>
+
+            <ul class="govuk-list govuk-list--bullet">
+                <li>a maintenance is due</li>
+                <li>at the end of a transaction to confirm completion</li>
+            </ul>
+
+            <p class="govuk-body">
+                Use standard typography rules with this component, this includes heading and body classes.
+            </p>
+
+            <p class="govuk-body">
+                Use buttons where required to trigger an action to be done.
+            </p>
+      
+
+            <div class="govuk-tabs" data-module="govuk-tabs">
+                <h2 class="govuk-tabs__title">
+                    Contents
+                </h2>
+                <ul class="govuk-tabs__list">
+                    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                        <a class="govuk-tabs__tab" href="#info-button-example">
+                            Example
+                        </a>
+                    </li>
+                    <li class="govuk-tabs__list-item">
+                        <a class="govuk-tabs__tab" href="#info-button-code">
+                            Code
+                        </a>
+                    </li>
+                </ul>
+                <section class="govuk-tabs__panel" id="info-button-example">
+                    <div class="gc-notification gc-notification--info">
+                        <h2 class="govuk-heading-m">This is due</h2>
+                        <p class="govuk-body">You need to do this action by 15 November 2019.</p>
+                        <a href="#" class="govuk-button">Start now</a>
+                    </div>
+                </section>
+                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="info-button-code">
+                    <pre><code class="html">&#x3C;div class=&#x22;gc-notification gc-notification--success&#x22;&#x3E;
+    &#x3C;h2 class=&#x22;govuk-heading-m&#x22;&#x3E;This is due&#x3C;/h2&#x3E;
+    &#x3C;p class=&#x22;govuk-body&#x22;&#x3E;You need to do this action by 15 November 2019.&#x3C;/p&#x3E;
+    &#x3C;button type=&#x22;button&#x22; class=&#x22;govuk-button&#x22;&#x3E;Start now&#x3C;/button&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+                </section>
+            </div>
+
+            <h2 class="govuk-heading-s">Success guidance</h2>
+            <p class="govuk-body">
+                When using the success style, all relevant information for the transaction must be contained within the notification. For example:
+            </p>
+            <ul class="govuk-list govuk-list--bullet">
+                <li>the outcome</li>
+                <li>a reference number (if applicable)</li>
+                <li>what has been sent to the user (if applicable)</li>
+            </ul>
+            <p class="govuk-body">
+                Do not include next steps in the notification component. For detailed guidance of how to use this when a transaction is complete, see the <a href="">transaction complete</a> pattern.
+            </p>
+
+            <h2 class="govuk-heading-m">When not to use this component</h2>
+            <p class="govuk-body">
+                Do not use this component to: 
+            </p>
+
+            <ul class="govuk-list govuk-list--bullet">
+                <li>alert the user to an error - use the error summary component</li>                
+                <li>give the user general information, use body content</li>                
+                <li>interrupt the user journey, use the interruption component</li>
+            </ul>
+         
+            <h2 class="govuk-heading-m">Services using this component</h2>
+            <ul class="govuk-list govuk-list--bullet">
+                <li>Manage your personal licence</li>                
+                <li>User research registration service</li>        
+                <li>Apply for a licence</li>
+            </ul>
+
+            <h2 class="govuk-heading-m">Research on this component</h2>
+            <p class="govuk-body">
+                This info style has been tested with users of the manage your personal licence service. It has tested well and had the desired effect for drawing the user's attention to their maintenance needing to be completed.
+            </p>
+            
+            <p class="govuk-body">
+               The success style has been tested through A/B testing with the GOV.UK Design System panel component and users preferred our Notification component as it was consistent with our other notification styles.
+            </p>
+            <p class="govuk-body">
+               The style and user research for this component have been fed back to the GOV.UK design team in relation to the panel component.
+             </p>
+
+
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

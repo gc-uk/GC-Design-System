@@ -21,7 +21,7 @@ exports.services_catalogue_get = function (req, res) {
     Promise.all([
         client.getEntries({
           'content_type': 'contentGroups',        
-          order: 'fields.title'
+         order: 'fields.title'
         })
        
       ])

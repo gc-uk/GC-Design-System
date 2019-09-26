@@ -14,15 +14,16 @@ var webServicesController = require('./controllers/webServicesController.js')
 
 // Design system
 // Components
-router.get('/design_system/components/alerts', componentsController.alerts);
-router.get('/design_system/components/beta-banner', componentsController.beta);
-router.get('/design_system/components/currency', componentsController.currency);
-router.get('/design_system/components/expander', componentsController.expander);
-router.get('/design_system/components/footer', componentsController.footer);
-router.get('/design_system/components/header', componentsController.header);
-router.get('/design_system/components/hero', componentsController.hero);
-router.get('/design_system/components/interruption-card', componentsController.interruption);
-router.get('/design_system/components/promo-cards', componentsController.promo);
+router.get('/design-system/components/', componentsController.index);
+router.get('/design-system/components/notifications', componentsController.notifications);
+router.get('/design-system/components/beta-banner', componentsController.beta);
+router.get('/design-system/components/currency', componentsController.currency);
+router.get('/design-system/components/expander', componentsController.expander);
+router.get('/design-system/components/footer', componentsController.footer);
+router.get('/design-system/components/header', componentsController.header);
+router.get('/design-system/components/hero', componentsController.hero);
+router.get('/design-system/components/interruption-card', componentsController.interruption);
+router.get('/design-system/components/promo-cards', componentsController.promo);
 router.get('/design-system/components/search', componentsController.search);
 router.get('/design-system/components/tags', componentsController.tags);
 router.get('/design-system/components/vertical-nav', componentsController.vertical_nav);

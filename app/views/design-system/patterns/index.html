@@ -11,7 +11,10 @@ gc-header-hero
 {% block heroContent %}
 <nav class="app-navigation govuk-clearfix">
     <ul class="app-navigation__list govuk-width-container">
-
+        <li class="app-navigation__list-item">
+            <a class="govuk-link govuk-link--no-visited-state app-navigation__link" href="/design-system/"
+              data-topnav="Styles">Guidance</a>
+          </li>
 
         <li class="app-navigation__list-item">
             <a class="govuk-link govuk-link--no-visited-state app-navigation__link" href="/design-system/styles/"
@@ -44,7 +47,7 @@ gc-header-hero
 
     <div class="app-pane__body govuk-width-container">
         <div class="app-pane__subnav app-hide-mobile">
-            {% include "../../includes/component-nav.html" %}
+            {% include "../../includes/component-patterns.html" %}
         </div>
 
         <div class="app-pane__content">

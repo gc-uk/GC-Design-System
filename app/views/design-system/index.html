@@ -9,68 +9,47 @@ gc-header-hero
 {% endblock %}
 
 {% block heroContent %}
+<nav class="app-navigation govuk-clearfix">
+  <ul class="app-navigation__list govuk-width-container">
 
-<section class="gc-hero gc-hero--image gc-hero--image-description govuk-!-padding-bottom-4">
 
-  <div class="govuk-width-container">
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-l govuk-!-margin-bottom-3 govuk-!-margin-top-7">Design System</h1>
-        <p class="govuk-body-l">The design system is a collection of styles, components and patterns to build consistent services for the Gambling Commission.</p>
-<p class="govuk-body">These should be used alongside the GOV.UK Design System.</p>
-      </div>
-    </div>
-  </div>
-</section>
+    <li class="app-navigation__list-item   app-navigation__list-item--current">
+      <a class="govuk-link govuk-link--no-visited-state app-navigation__link" href="/design-system/"
+        data-topnav="Styles">Guidance</a>
+    </li>
+    <li class="app-navigation__list-item">
+      <a class="govuk-link govuk-link--no-visited-state app-navigation__link" href="/design-system/styles/"
+        data-topnav="Styles">Styles</a>
+    </li>
+
+    <li class="app-navigation__list-item">
+      <a class="govuk-link govuk-link--no-visited-state app-navigation__link" href="/design-system/components/"
+        data-topnav="Components">Components</a>
+    </li>
+
+    <li class="app-navigation__list-item">
+      <a class="govuk-link govuk-link--no-visited-state app-navigation__link" href="/design-system/patterns/"
+        data-topnav="Patterns">Patterns</a>
+    </li>
+
+
+
+  </ul>
+</nav>
+{% endblock %}
+
+{% block beforeContent %}
 
 {% endblock %}
 
 {% block content %}
-
-
-
-<div class="govuk-grid-row gc-promo-group">
- 
-  <div class="govuk-grid-column-one-third gc-promo-group__item">
-    <div class="gc-promo app-promo--grey">
-      <a class="gc-promo__link-wrapper" href="/design-system/styles/">
-
-        <div class="gc-promo__content">
-          <h2 class="govuk-heading-s govuk-!-margin-bottom-2">Styles
-          </h2>
-          <p class="gc-promo__description">Use of colors, images, layout and typography</p>
-        </div>
-      </a>
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Guidance</h1>
+      <p class="govuk-body">The design system provides guidelines and examples of styles, components and patterns to
+        consistently design and build Gambling Commission services.</p>
     </div>
   </div>
-
-  <div class="govuk-grid-column-one-third gc-promo-group__item">
-    <div class="gc-promo app-promo--grey">
-        <a class="gc-promo__link-wrapper" href="/design-system/components/">
-
-        <div class="gc-promo__content">
-          <h2 class="govuk-heading-s govuk-!-margin-bottom-2">Components
-          </h2>
-          <p class="gc-promo__description">Reusable, accessible components for forms, navigation, tables and more</p>
-        </div>
-      </a>
-    </div>
-  </div>
-
-  <div class="govuk-grid-column-one-third gc-promo-group__item">
-    <div class="gc-promo app-promo--grey">
-        <a class="gc-promo__link-wrapper" href="/design-system/patterns/">
-
-        <div class="gc-promo__content">
-          <h2 class="govuk-heading-s govuk-!-margin-bottom-2">Patterns
-          </h2>
-          <p class="gc-promo__description">Patterns for common tasks like uploading files, entering information or creating accounts</p>
-        </div>
-      </a>
-    </div>
-  </div>
-
- 
 </div>
-
 {% endblock %}

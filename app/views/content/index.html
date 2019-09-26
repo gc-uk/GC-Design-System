@@ -1,29 +1,46 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Getting started
+Content
 {% endblock %}
 
 {% block heroClass %}
-gc-header-hero
+
 {% endblock %}
 
 {% block heroContent %}
 
-<section class="gc-hero gc-hero--image gc-hero--image-description govuk-!-padding-bottom-4">
+{% endblock %}
 
-  <div class="govuk-width-container">
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-l govuk-!-margin-bottom-3 govuk-!-margin-top-7">Content</h1>
-        <p class="govuk-body-l">Content explanation and summary</p>
-      </div>
-    </div>
-  </div>
-</section>
+{% block beforeContent %}
 
 {% endblock %}
 
 {% block content %}
+<div class="govuk-grid-row">
 
+
+    <div class="app-pane__body govuk-width-container">
+        <div class="app-pane__subnav app-hide-mobile">
+            {% include "../../includes/content-nav.html" %}
+        </div>
+
+        <div class="app-pane__content">
+            <h1 class="govuk-heading-l">Content</h1>
+           
+
+            <p class="govuk-body">Useful pointers for the content section:</p>
+
+            
+            <p class="govuk-body">A-Z: Terms used by the GC and the user alternatives; eg: "Operator" - "Gambling Business" - Do this as a heading for the A-Z item, a description and then the user alternative term</p>
+            <p class="govuk-body">Audience: How we write for our users, use language they use, be specific, informative, clear, concise and remove emotion</p>
+            <p class="govuk-body">Controlled language: Microcopy used in services, eg: Start, Save and continue, Sign in, Log out, Create an account, Add another </p>
+            <p class="govuk-body">Key points: Active and passive voice use, referring to the user, contractions, dates, links</p>
+            <p class="govuk-body">Emails and texts: How we write emails and texts, addressing the user, sign off, subjects</p>
+            <p class="govuk-body">Tools: Tools to help with content</p>
+        </div>
+
+    </div>
+
+</div>
 {% endblock %}
