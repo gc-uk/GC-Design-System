@@ -57,7 +57,7 @@
     <header class="gc-header {% block heroClass %}{% endblock%}" role="banner" data-module="govuk-header">
         <div class="gc-header-container govuk-width-container">
             <div class="gc-header-logo">
-                <a href="https://www.gamblingcommission.gov.uk" target="_Blank" rel="noopener"><span
+                <a href="/" target="_Blank" rel="noopener"><span
                         class="govuk-visually-hidden">Go to the Gambling Commission website, link opens in a new
                         window.</span>
                     <img src="https://gc-frontend-cdn.herokuapp.com/public/images/logo.png" class="gc-logo"
@@ -72,14 +72,19 @@
                     aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
                 <nav>
                     <ul id="navigation" class="govuk-header__navigation " aria-label="Top Level Navigation">
-                        <li class="govuk-header__navigation-item {{gs-nav-active}}">
-                            <a class="govuk-header__link" href="/get-started">
-                                Get started
-                            </a>
-                        </li>
                         <li class="govuk-header__navigation-item {{s-nav-active}}">
                             <a class="govuk-header__link" href="/services/">
                                 Services
+                            </a>
+                        </li>
+                        <li class="govuk-header__navigation-item {{ac-nav-active}}">
+                            <a class="govuk-header__link" href="/accessibility">
+                                Accessibility
+                            </a>
+                        </li>
+                        <li class="govuk-header__navigation-item {{ur-nav-active}}">
+                            <a class="govuk-header__link" href="/content/">
+                                Content
                             </a>
                         </li>
                         <li class="govuk-header__navigation-item {{ds-nav-active}}">
@@ -93,8 +98,8 @@
                             </a>
                         </li>
                         <li class="govuk-header__navigation-item {{ur-nav-active}}">
-                            <a class="govuk-header__link" href="/content/">
-                                Content
+                            <a class="govuk-header__link" href="/prototyping/">
+                                Prototyping
                             </a>
                         </li>
                     </ul>
@@ -166,7 +171,9 @@
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/default.min.css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
 
-    <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
 </body>
 
 </html>

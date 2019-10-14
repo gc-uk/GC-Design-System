@@ -13,6 +13,8 @@ var patternsController = require('./controllers/patternsController.js')
 var stylesController = require('./controllers/stylesController.js')
 var contentController = require('./controllers/contentController.js')
 
+var accessibilityController = require('./controllers/accessibilityController.js')
+
 // Design system
 // Components
 router.get('/design-system/components/', componentsController.index);
@@ -33,6 +35,9 @@ router.get('/design-system/components/vertical-nav', componentsController.vertic
 
 // Styles
 
+// Accessibility
+router.get('/accessibility/', accessibilityController.index_get);
+router.get('/accessibility/content/:id', accessibilityController.content_get);
 
 // Services
 router.get('/services/', servicesController.services_catalogue_get);
