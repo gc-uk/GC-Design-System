@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Page template
+{% endblock %}
+
+{% block heroClass %}
+
+{% endblock %}
+
+{% block heroContent %}
+<nav class="app-navigation govuk-clearfix">
+    <ul class="app-navigation__list govuk-width-container">
+        <li class="app-navigation__list-item">
+            <a class="govuk-link govuk-link--no-visited-state app-navigation__link" href="/design-system/"
+              data-topnav="Styles">Guidance</a>
+          </li>
+
+        <li class="app-navigation__list-item  app-navigation__list-item--current">
+            <a class="govuk-link govuk-link--no-visited-state app-navigation__link" href="/design-system/styles/"
+                data-topnav="Styles">Styles</a>
+        </li>
+
+        <li class="app-navigation__list-item">
+            <a class="govuk-link govuk-link--no-visited-state app-navigation__link" href="/design-system/components/"
+                data-topnav="Components">Components</a>
+        </li>
+
+        <li class="app-navigation__list-item">
+            <a class="govuk-link govuk-link--no-visited-state app-navigation__link" href="/design-system/patterns/"
+                data-topnav="Patterns">Patterns</a>
+        </li>
+
+
+
+    </ul>
+</nav>
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+
+
+    <div class="app-pane__body govuk-width-container">
+        <div class="app-pane__subnav app-hide-mobile">
+            {% include "../../includes/styles-nav.html" %}
+        </div>
+
+        <div class="app-pane__content">
+            <h1 class="govuk-heading-l">Page template</h1>
+            <p class="govuk-body">Use this page template to keep pages consistent across services.</p>
+            <p class="govuk-body">This template includes the basic markup to render a standard page. It also includes:</p>
+            <ul class="govuk-list govuk-list--bullet">
+                <li>JavaScript that adds <code>.js-enabled</code> class which is required for JavaScript enabled components</li>
+                <li>The skip link, header and footer</li>
+                <li>Favicon and app icons</li>
+            </ul>
+
+            
+
+        </div>
+
+
+
+    </div>
+
+</div>
+{% endblock %}
