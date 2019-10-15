@@ -29,12 +29,12 @@
                     {% if i.fields.menuTitle === content_page.items[0].fields.menuTitle %}
                     <li class="gc-vertical-nav__section-item gc-vertical-nav__section-item--current">
                         <a class="gc-vertical-nav__link govuk-link"
-                            href="/accessibility/content/{{ i.fields.slug }}">{{i.fields.menuTitle}}</a>
+                            href="/content/content/{{ i.fields.slug }}">{{i.fields.menuTitle}}</a>
                     </li>
                     {% else %}
                     <li class="gc-vertical-nav__section-item">
                         <a class="gc-vertical-nav__link govuk-link"
-                            href="/accessibility/content/{{ i.fields.slug }}">{{i.fields.menuTitle}}</a>
+                            href="/content/content/{{ i.fields.slug }}">{{i.fields.menuTitle}}</a>
                     </li>
                     {% endif %}
                     {%endfor%}

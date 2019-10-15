@@ -42,11 +42,22 @@ exports.beta = function (req, res) {
     });
 }
 
+
+exports.feedback = function (req, res) {
+
+    var feedbackActive = 'gc-vertical-nav__section-item--current';
+    res.render("design-system/components/feedback-banner", {
+        feedbackActive,
+        designactive_components
+    });
+}
+
 exports.currency = function (req, res) {
 
     var currencyActive = 'gc-vertical-nav__section-item--current';
     res.render("design-system/components/currency", {
-        currencyActive
+        currencyActive,
+        designactive_components
     });
 }
 
@@ -85,7 +96,7 @@ exports.hero = function (req, res) {
 exports.interruption = function (req, res) {
 
     var interruptionActive = 'gc-vertical-nav__section-item--current';
-    res.render("design-system/components/interruption_card", {
+    res.render("design-system/components/interruption-card", {
         interruptionActive
     });
 }

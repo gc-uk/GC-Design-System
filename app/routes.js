@@ -14,6 +14,7 @@ var stylesController = require('./controllers/stylesController.js')
 var contentController = require('./controllers/contentController.js')
 
 var accessibilityController = require('./controllers/accessibilityController.js')
+var userResearchController = require('./controllers/userResearchController.js')
 
 // Design system
 // Components
@@ -22,6 +23,7 @@ router.get('/design-system/components/notifications', componentsController.notif
 router.get('/design-system/components/beta-banner', componentsController.beta);
 router.get('/design-system/components/currency', componentsController.currency);
 router.get('/design-system/components/expander', componentsController.expander);
+router.get('/design-system/components/feedback-banner', componentsController.feedback);
 router.get('/design-system/components/footer', componentsController.footer);
 router.get('/design-system/components/header', componentsController.header);
 router.get('/design-system/components/hero', componentsController.hero);
@@ -38,6 +40,10 @@ router.get('/design-system/components/vertical-nav', componentsController.vertic
 // Accessibility
 router.get('/accessibility/', accessibilityController.index_get);
 router.get('/accessibility/content/:id', accessibilityController.content_get);
+
+// User Research
+router.get('/user-research/', userResearchController.index_get);
+router.get('/user-research/content/:id', userResearchController.content_get);
 
 // Services
 router.get('/services/', servicesController.services_catalogue_get);
@@ -60,11 +66,6 @@ router.get('/web_services/detail_page/:id', webServicesController.web_services_d
 
 // Content 
 router.get('/content/', contentController.index_get);
-router.get('/content/a-z', contentController.az_get);
-router.get('/content/audience', contentController.audience_get);
-router.get('/content/controlled-language', contentController.controlled_language_get);
-router.get('/content/emails-and-text-messages', contentController.emails_and_texts_get);
-router.get('/content/key-styles', contentController.key_styles_get);
-router.get('/content/tools', contentController.tools_get);
+router.get('/content/content/:id', contentController.content_get);
 
 module.exports = router

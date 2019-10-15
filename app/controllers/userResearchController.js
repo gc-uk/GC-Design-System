@@ -6,12 +6,12 @@ const client = contentful.createClient({
 })
 
 exports.index_get = function (req, res) {
-    res.redirect('/content/content/introduction');
+    res.redirect('/user-research/content/introduction');
 }
 
 exports.content_get = function (req, res) {
 
-    console.log('contentPages content page')
+    console.log('accessibility content page')
     var slug = req.params.id;
     var content_page;
     var list_of_pages;
@@ -19,11 +19,11 @@ exports.content_get = function (req, res) {
     console.log(slug)
     Promise.all([
             client.getEntries({
-                'content_type': 'contentPages',
+                'content_type': 'userResearchPages',
                 'fields.slug': slug
             }),
             client.getEntries({
-                'content_type': 'contentPages',
+                'content_type': 'userResearchPages',
                 order: 'fields.order'
             })
         ])
@@ -32,7 +32,7 @@ exports.content_get = function (req, res) {
                 list_of_pages = o
 
             console.log(n)
-            res.render('content/content', {
+            res.render('user-research/content', {
                 content_page,
                 list_of_pages
             });
