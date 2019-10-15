@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Getting started
+Header
 {% endblock %}
 
 {% block heroClass %}
@@ -71,28 +71,69 @@ gc-header-hero
                 </ul>
                 <section class="govuk-tabs__panel" id="past-day">
 
-                    <nav class="gc-vertical-nav">
-                        <ul class="gc-vertical-nav__section">
-                            <li class="gc-vertical-nav__section-item {{alert-c-nav-active}}">
-                                <a class="gc-vertical-nav__link " href="#">Alert</a>
-                            </li>
-                        </ul>
-                    </nav>
+                        <header class="gc-header" role="banner" data-module="govuk-header">
+                                <div class="gc-header-container govuk-width-container">
+                                    <div class="gc-header-logo">
+                                        <a href="/" target="_Blank" rel="noopener"><span
+                                                class="govuk-visually-hidden">Go to the Gambling Commission website, link opens in a new
+                                                window.</span>
+                                            <img src="https://gc-frontend-cdn.herokuapp.com/public/images/logo.png" class="gc-logo"
+                                                alt="Gambling Commission logo">
+                                        </a>
+                                    </div>
+                                    <div class="gc-header-content">
+                                        <a href="/" class="gc-header-service-name">
+                                            Service name
+                                        </a>
+                                        <button type="button" role="button" class="govuk-header__menu-button govuk-js-header-toggle"
+                                            aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
+                                        <nav>
+                                            <ul id="navigation" class="govuk-header__navigation " aria-label="Top Level Navigation">
+                                                <li class="govuk-header__navigation-item">
+                                                    <a class="govuk-header__link" href="/">
+                                                        Navigation
+                                                    </a>
+                                                </li>                      
+                                                
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </header>
 
                 </section>
                 <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week">
                     <div class="app-tabs__container">
                         <pre>
-                            <code class="html">
-&#x3C;nav class=&#x22;gc-vertical-nav&#x22;&#x3E;
-&#x3C;ul class=&#x22;gc-vertical-nav__section&#x22;&#x3E;
-
-    &#x3C;li class=&#x22;gc-vertical-nav__section-item {{alert-c-nav-active}}&#x22;&#x3E;
-        &#x3C;a class=&#x22;gc-vertical-nav__link &#x22; href=&#x22;#&#x22;&#x3E;Alert&#x3C;/a&#x3E;
-    &#x3C;/li&#x3E;
-&#x3C;/ul&#x3E;
-&#x3C;/nav&#x3E;
-                        </code>
+                            <code class="html">&#x3C;header class=&#x22;gc-header&#x22; role=&#x22;banner&#x22; data-module=&#x22;govuk-header&#x22;&#x3E;
+    &#x3C;div class=&#x22;gc-header-container govuk-width-container&#x22;&#x3E;
+        &#x3C;div class=&#x22;gc-header-logo&#x22;&#x3E;
+            &#x3C;a href=&#x22;/&#x22; target=&#x22;_Blank&#x22; rel=&#x22;noopener&#x22;&#x3E;&#x3C;span
+                    class=&#x22;govuk-visually-hidden&#x22;&#x3E;Go to the Gambling Commission website, link opens in a new
+                    window.&#x3C;/span&#x3E;
+                &#x3C;img src=&#x22;https://gc-frontend-cdn.herokuapp.com/public/images/logo.png&#x22; class=&#x22;gc-logo&#x22;
+                    alt=&#x22;Gambling Commission logo&#x22;&#x3E;
+            &#x3C;/a&#x3E;
+        &#x3C;/div&#x3E;
+        &#x3C;div class=&#x22;gc-header-content&#x22;&#x3E;
+            &#x3C;a href=&#x22;/&#x22; class=&#x22;gc-header-service-name&#x22;&#x3E;
+                Service name
+            &#x3C;/a&#x3E;
+            &#x3C;button type=&#x22;button&#x22; role=&#x22;button&#x22; class=&#x22;govuk-header__menu-button govuk-js-header-toggle&#x22;
+                aria-controls=&#x22;navigation&#x22; aria-label=&#x22;Show or hide Top Level Navigation&#x22;&#x3E;Menu&#x3C;/button&#x3E;
+            &#x3C;nav&#x3E;
+                &#x3C;ul id=&#x22;navigation&#x22; class=&#x22;govuk-header__navigation &#x22; aria-label=&#x22;Top Level Navigation&#x22;&#x3E;
+                    &#x3C;li class=&#x22;govuk-header__navigation-item&#x22;&#x3E;
+                        &#x3C;a class=&#x22;govuk-header__link&#x22; href=&#x22;/&#x22;&#x3E;
+                            Navigation
+                        &#x3C;/a&#x3E;
+                    &#x3C;/li&#x3E;                      
+                    
+                &#x3C;/ul&#x3E;
+            &#x3C;/nav&#x3E;
+        &#x3C;/div&#x3E;
+    &#x3C;/div&#x3E;
+&#x3C;/header&#x3E;</code>
                     </pre>
                     </div>
                 </section>
@@ -102,23 +143,10 @@ gc-header-hero
 
             <h2 class="govuk-heading-l">When to use this component</h2>
             <p class="govuk-body">
-                [tk]
+               Use this on all services which are provided through the domain gamblingcommission.gov.uk 
             </p>
 
-            <h2 class="govuk-heading-l">When not to use this component</h2>
-            <p class="govuk-body">
-                [tk]
-            </p>
-
-            <h2 class="govuk-heading-l">How it works</h2>
-            <p class="govuk-body">
-                [tk]
-            </p>
-
-            <h2 class="govuk-heading-l">Research on this component</h2>
-            <p class="govuk-body">
-                [tk]
-            </p>
+       
 
         </div>
 

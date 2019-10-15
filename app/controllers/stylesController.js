@@ -1,11 +1,23 @@
 var express = require('express');
 var router = express.Router();
 
-exports.vertical_nav = function (req, res) {
+var active = 'gc-vertical-nav__section-item--current'
+
+exports.typography = function (req, res) {
     
-    var verticalCNavActive = 'gc-vertical-nav__section-item--current';
-    res.render("design-system/components/vertical-nav",{
-        verticalCNavActive
+    var typoActive = active
+    res.render("design-system/styles/typography",{
+        typoActive
+    });
+}
+
+
+
+exports.page = function (req, res) {
+    
+    var pageActive = active
+    res.render("design-system/styles/page",{
+        pageActive
     });
 }
 

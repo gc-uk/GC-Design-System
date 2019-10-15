@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Getting started
+Interruption card
 {% endblock %}
 
 {% block heroClass %}
@@ -49,7 +49,7 @@ gc-header-hero
         <div class="app-pane__content">
             <h1 class="govuk-heading-xl">Interuption card</h1>
             <p class="govuk-body">
-                explanation
+                A component that interrupts the user flow with important information and must be acknowledged before continuing.
             </p>
 
             <div class="govuk-tabs" data-module="govuk-tabs">
@@ -82,18 +82,7 @@ gc-header-hero
                 </section>
                 <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week">
                     <div class="app-tabs__container">
-                        <pre>
-                            <code class="html">
-&#x3C;nav class=&#x22;gc-vertical-nav&#x22;&#x3E;
-&#x3C;ul class=&#x22;gc-vertical-nav__section&#x22;&#x3E;
-
-    &#x3C;li class=&#x22;gc-vertical-nav__section-item {{alert-c-nav-active}}&#x22;&#x3E;
-        &#x3C;a class=&#x22;gc-vertical-nav__link &#x22; href=&#x22;#&#x22;&#x3E;Alert&#x3C;/a&#x3E;
-    &#x3C;/li&#x3E;
-&#x3C;/ul&#x3E;
-&#x3C;/nav&#x3E;
-                        </code>
-                    </pre>
+                        <pre><code class="html"></code></pre>
                     </div>
                 </section>
 
@@ -101,19 +90,26 @@ gc-header-hero
 
 
             <h2 class="govuk-heading-l">When to use this component</h2>
-            <p class="govuk-body">
-                [tk]
-            </p>
+           <ul class="govuk-list govuk-list--bullet">
+               <li>to draw a users attention to important information specific to that point in their journey</li>
+               <li>allow users to acknowledge something before continuing</li>
+               <li>If important information is styled as normal page content and users are missing it, this is unexpected so helps bring attention to important or essential information</li>
+           </ul>
 
             <h2 class="govuk-heading-l">When not to use this component</h2>
-            <p class="govuk-body">
-                [tk]
-            </p>
+            <ul class="govuk-list govuk-list--bullet">
+                    <li>for large amounts of content</li>
+                    <li>the effectiveness of this pattern is based on it's unexpected appearance, so should be used sparingly</li>
+                </ul>
 
-            <h2 class="govuk-heading-l">How it works</h2>
-            <p class="govuk-body">
-                [tk]
-            </p>
+                <p class="govuk-body">Consider how content can be made clearer or easier to understand by users before using this component in services.</p>
+
+            <h2 class="govuk-heading-l">The interruption card should:</h2>
+            <ul class="govuk-list govuk-list--bullet">
+                    <li>have a large heading <code>govuk-heading-l</code></li>
+                    <li>use larger body text <code>govuk-body-l</code></li>
+                    <li>use a "Continue" button to progress to the next step in the users journey</li>
+                </ul>
 
             <h2 class="govuk-heading-l">Research on this component</h2>
             <p class="govuk-body">

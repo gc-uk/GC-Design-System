@@ -48,7 +48,7 @@ gc-header-hero
 
             <h2 class="govuk-heading-m">Variations of this component</h2>
             <p class="govuk-body">
-                There are 2 variations of this component.
+                There are 3 variations of this component.
             </p>
 
             <div class="govuk-tabs" data-module="govuk-tabs">
@@ -82,6 +82,36 @@ gc-header-hero
                 </section>
             </div>
 
+            <div class="govuk-tabs" data-module="govuk-tabs">
+                    <h2 class="govuk-tabs__title">
+                        Contents
+                    </h2>
+                    <ul class="govuk-tabs__list">
+                        <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                            <a class="govuk-tabs__tab" href="#warning-example">
+                                Example
+                            </a>
+                        </li>
+                        <li class="govuk-tabs__list-item">
+                            <a class="govuk-tabs__tab" href="#warning-code">
+                                Code
+                            </a>
+                        </li>
+                    </ul>
+                    <section class="govuk-tabs__panel" id="warning-example">
+                        <div class="gc-notification gc-notification--warning">
+                            <h2 class="govuk-heading-m">Warning</h2>
+                            <p class="govuk-body">Used when the user needs to be made aware of something they really need to do urgently.
+                            </p>
+                        </div>
+                    </section>
+                    <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="warning-code">
+                        <pre><code class="html">&#x3C;div class=&#x22;gc-notification gc-notification--warning&#x22;&#x3E;
+        &#x3C;h2 class=&#x22;govuk-heading-m&#x22;&#x3E;Warning&#x3C;/h2&#x3E;
+        &#x3C;p class=&#x22;govuk-body&#x22;&#x3E;Used when the user needs to be made aware of something they really need to do urgently.&#x3C;/p&#x3E;
+    &#x3C;/div&#x3E;</code></pre>
+                    </section>
+                </div>
 
             <div class="govuk-tabs" data-module="govuk-tabs">
                 <h2 class="govuk-tabs__title">
@@ -114,7 +144,6 @@ gc-header-hero
 &#x3C;/div&#x3E;</code></pre>
                 </section>
             </div>
-
 
 
 

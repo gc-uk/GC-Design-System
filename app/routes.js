@@ -33,9 +33,12 @@ router.get('/design-system/components/search', componentsController.search);
 router.get('/design-system/components/tags', componentsController.tags);
 router.get('/design-system/components/vertical-nav', componentsController.vertical_nav);
 
+
 // Patterns
 
 // Styles
+router.get('/design-system/styles/typography', stylesController.typography);
+router.get('/design-system/styles/page', stylesController.page);
 
 // Accessibility
 router.get('/accessibility/', accessibilityController.index_get);
