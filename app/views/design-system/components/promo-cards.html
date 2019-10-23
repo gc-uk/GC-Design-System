@@ -10,12 +10,12 @@ gc-header-hero
 
 {% block heroContent %}
 <nav class="app-navigation govuk-clearfix">
-        <ul class="app-navigation__list govuk-width-container">
-    
-            {% include "../../includes/design-main-nav.html" %}
-    
-        </ul>
-    </nav>
+    <ul class="app-navigation__list govuk-width-container">
+
+        {% include "../../includes/design-main-nav.html" %}
+
+    </ul>
+</nav>
 {% endblock %}
 
 {% block beforeContent %}
@@ -145,8 +145,8 @@ gc-header-hero
 
                 </ul>
                 <section class="govuk-tabs__panel" id="card-2-example">
-                    <div class="govuk-grid-row">
-                        <div class="govuk-grid-column-one-third">
+                    <div class="govuk-grid-row gc-card-group">
+                        <div class="govuk-grid-column-one-half gc-card-group__item">
                             <div class="gc-card-with-actions">
                                 <div class="gc-card-with-actions-body">
                                     <h3 class="govuk-heading-s govuk-!-margin-bottom-2">Event reporting</h3>
@@ -156,11 +156,13 @@ gc-header-hero
                                     <ul class="govuk-list">
                                         <li><a class="govuk-link" href="#">Action link</a></li>
                                         <li><a class="govuk-link" href="#">Action link</a></li>
+                                        <li><a class="govuk-link" href="#">Action link</a></li>
+                                        <li><a class="govuk-link" href="#">Action link</a></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
-                        <div class="govuk-grid-column-one-third">
+                        <div class="govuk-grid-column-one-half gc-card-group__item">
                             <div class="gc-card-with-actions">
                                 <div class="gc-card-with-actions-body">
                                     <h3 class="govuk-heading-s govuk-!-margin-bottom-2">Event reporting</h3>
@@ -177,8 +179,8 @@ gc-header-hero
                 </section>
                 <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="card-2-code">
                     <div class="app-tabs__container">
-                        <pre><code class="html">&lt;div class=&quot;govuk-grid-row&quot;&gt;
-    &lt;div class=&quot;govuk-grid-column-one-third&quot;&gt;
+                        <pre><code class="html">&lt;div class=&quot;govuk-grid-row  gc-card-group&quot;&gt;
+    &lt;div class=&quot;govuk-grid-column-one-third  gc-card-group__item&quot;&gt;
         &lt;div class=&quot;gc-card-with-actions&quot;&gt;
             &lt;div class=&quot;gc-card-with-actions-body&quot;&gt;
                 &lt;h3 class=&quot;govuk-heading-s govuk-!-margin-bottom-2&quot;&gt;Event reporting&lt;/h3&gt;
@@ -192,7 +194,7 @@ gc-header-hero
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/div&gt;
-    &lt;div class=&quot;govuk-grid-column-one-third&quot;&gt;
+    &lt;div class=&quot;govuk-grid-column-one-third  gc-card-group__item&quot;&gt;
         &lt;div class=&quot;gc-card-with-actions&quot;&gt;
             &lt;div class=&quot;gc-card-with-actions-body&quot;&gt;
                 &lt;h3 class=&quot;govuk-heading-s govuk-!-margin-bottom-2&quot;&gt;Event reporting&lt;/h3&gt;
