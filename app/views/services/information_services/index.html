@@ -11,33 +11,26 @@ Information services
 {% block content %}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-l">
-      Information Services
-      <hr class="govuk-section-break govuk-section-break--invisible">
-    </h1>
+    <h1 class="govuk-heading-l">Information Services</h1>
 
-    <p> Information services cover:</p>
-
-    <h2 class="govuk-heading-m">
-      Active services
-      <hr class="govuk-section-break govuk-section-break--invisible">
-    </h2>
+    <h2 class="govuk-heading-m">Active services</h2>
 
     <div class="govuk-grid-row">
       <div class="gc-promo-group">
         {% for i in information_services.items %}
         {% if i.fields.legacy === false %}
 
-        <div class="govuk-grid-column-full gc-promo-group__item">
-          <div class="gc-promo app-promo--grey">
-            <a class="gc-promo__link-wrapper" href="/information_services/detail_page/{{ i.fields.slug }}">
-              <div class="gc-promo__content">
-                <h3 class="govuk-heading-s govuk-!-margin-bottom-2">{{i.fields.title}}</h3>
-                <p class="gc-promo__description">{{i.fields.shortDescription}}</p>
-              </div>
-            </a>
+        <div class="govuk-grid-column-two-thirds gc-card-group__item">
+            <div class="gc-card">
+              <a class="gc-card__link-wrapper" href="/information_services/detail_page/{{ i.fields.slug }}">
+                <div class="gc-card__content">
+                  <h3 class="govuk-heading-s govuk-!-margin-bottom-2">{{i.fields.title}}</h3>
+                  <p class="gc-card__description">{{i.fields.shortDescription}}</p>
+                </div>
+              </a>
+            </div>
           </div>
-        </div>
+       
         {% endif %}
         {% endfor %}
 
@@ -51,16 +44,17 @@ Information services
           </h2>
         </div>
 
-        <div class="govuk-grid-column-full gc-promo-group__item">
-          <div class="gc-promo app-promo--grey">
-            <a class="gc-promo__link-wrapper" href="/information_services/detail_page/{{ i.fields.slug }}">
-              <div class="gc-promo__content">
-                <h3 class="govuk-heading-s govuk-!-margin-bottom-2">{{i.fields.title}}</h3>
-                <p class="gc-promo__description">{{i.fields.shortDescription}}</p>
-              </div>
-            </a>
+      
+        <div class="govuk-grid-column-two-thirds gc-card-group__item">
+            <div class="gc-card">
+              <a class="gc-card__link-wrapper" href="/information_services/detail_page/{{ i.fields.slug }}">
+                <div class="gc-card__content">
+                  <h3 class="govuk-heading-s govuk-!-margin-bottom-2">{{i.fields.title}}</h3>
+                  <p class="gc-card__description">{{i.fields.shortDescription}}</p>
+                </div>
+              </a>
+            </div>
           </div>
-        </div>
         {% endif %}
         {% endfor %}
       </div>

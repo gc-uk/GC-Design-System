@@ -1,4 +1,5 @@
 const contentful = require('contentful')
+var servicenavactive = 'govuk-header__navigation-item--active';
 
 const client = contentful.createClient({
     space: process.env.space,
@@ -29,7 +30,7 @@ exports.services_catalogue_get = function (req, res) {
         service_catalogue = n
               
         res.render('services/index', {
-            service_catalogue
+            service_catalogue, servicenavactive
         });
       })
       .catch(error => {

@@ -1,4 +1,5 @@
 const contentful = require('contentful')
+var accessibilitynavactive = 'govuk-header__navigation-item--active';
 
 const client = contentful.createClient({
     space: process.env.space,
@@ -34,7 +35,8 @@ exports.content_get = function (req, res) {
             console.log(n)
             res.render('accessibility/content', {
                 content_page,
-                list_of_pages
+                list_of_pages,
+                accessibilitynavactive
             });
         })
         .catch(error => {

@@ -1,23 +1,20 @@
 var express = require('express');
 var router = express.Router();
 
-var active = 'gc-vertical-nav__section-item--current'
+var designsystemnavactive = 'govuk-header__navigation-item--active';
 
 exports.typography = function (req, res) {
     
-    var typoActive = active
-    res.render("design-system/styles/typography",{
-        typoActive
+      res.render("design-system/styles/typography",{
+        designsystemnavactive
     });
 }
 
 
 
 exports.page = function (req, res) {
-    
-    var pageActive = active
-    res.render("design-system/styles/page",{
-        pageActive
+        res.render("design-system/styles/page",{    
+        designsystemnavactive
     });
 }
 
