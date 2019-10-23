@@ -34,7 +34,7 @@ gc-header-hero
         <div class="app-pane__content">
             <h1 class="govuk-heading-xl">Footer</h1>
             <p class="govuk-body">
-                Use the footer display the Gambling Commission information about the creation of the service. 
+                    The footer provides information about the service or department. Including links to policies, terms and conditions and the accessibility statement.
             </p>
 
             <div class="govuk-tabs" data-module="govuk-tabs">
@@ -55,29 +55,77 @@ gc-header-hero
 
                 </ul>
                 <section class="govuk-tabs__panel" id="past-day">
-
-                    <nav class="gc-vertical-nav">
-                        <ul class="gc-vertical-nav__section">
-                            <li class="gc-vertical-nav__section-item {{alert-c-nav-active}}">
-                                <a class="gc-vertical-nav__link " href="#">Alert</a>
-                            </li>
-                        </ul>
-                    </nav>
-
+                        <footer class="gc-footer " role="contentinfo">
+                                <div class="govuk-width-container ">
+                                    <div class="govuk-footer__meta">
+                                        <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+                                            <h3 class="govuk-visually-hidden">Support links</h3>
+                                            <ul class="govuk-footer__inline-list">
+                                                <li class="govuk-footer__inline-list-item">
+                                                    <a class="govuk-footer__link" href="/accessibility" target="_Blank" rel="noopener">
+                                                        Accessibility statement
+                                                    </a>
+                                                </li>
+                                                <li class="govuk-footer__inline-list-item">
+                                                    <a class="govuk-footer__link"
+                                                        href="https://www.gamblingcommission.gov.uk/Footer/Privacy-and-cookies.aspx"
+                                                        target="_Blank" rel="noopener">
+                                                        Privacy and cookies
+                                                    </a>
+                                                </li>
+                                                <li class="govuk-footer__inline-list-item">
+                                                    <a class="govuk-footer__link"
+                                                        href="https://www.gamblingcommission.gov.uk/Footer/Terms-and-conditions.aspx"
+                                                        target="_Blank" rel="noopener">
+                                                        Terms and conditions
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                            <span class="gc-footer-sub">
+                                                Built by the Gambling Commission Digital Team
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </footer>
+                   
                 </section>
                 <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week">
                     <div class="app-tabs__container">
                         <pre>
-                            <code class="html">
-&#x3C;nav class=&#x22;gc-vertical-nav&#x22;&#x3E;
-&#x3C;ul class=&#x22;gc-vertical-nav__section&#x22;&#x3E;
-
-    &#x3C;li class=&#x22;gc-vertical-nav__section-item {{alert-c-nav-active}}&#x22;&#x3E;
-        &#x3C;a class=&#x22;gc-vertical-nav__link &#x22; href=&#x22;#&#x22;&#x3E;Alert&#x3C;/a&#x3E;
-    &#x3C;/li&#x3E;
-&#x3C;/ul&#x3E;
-&#x3C;/nav&#x3E;
-                        </code>
+                            <code class="html">&#x3C;footer class=&#x22;gc-footer &#x22; role=&#x22;contentinfo&#x22;&#x3E;
+    &#x3C;div class=&#x22;govuk-width-container &#x22;&#x3E;
+        &#x3C;div class=&#x22;govuk-footer__meta&#x22;&#x3E;
+            &#x3C;div class=&#x22;govuk-footer__meta-item govuk-footer__meta-item--grow&#x22;&#x3E;
+                &#x3C;h3 class=&#x22;govuk-visually-hidden&#x22;&#x3E;Support links&#x3C;/h3&#x3E;
+                &#x3C;ul class=&#x22;govuk-footer__inline-list&#x22;&#x3E;
+                    &#x3C;li class=&#x22;govuk-footer__inline-list-item&#x22;&#x3E;
+                        &#x3C;a class=&#x22;govuk-footer__link&#x22; href=&#x22;/accessibility&#x22; target=&#x22;_Blank&#x22; rel=&#x22;noopener&#x22;&#x3E;
+                            Accessibility statement
+                        &#x3C;/a&#x3E;
+                    &#x3C;/li&#x3E;
+                    &#x3C;li class=&#x22;govuk-footer__inline-list-item&#x22;&#x3E;
+                        &#x3C;a class=&#x22;govuk-footer__link&#x22;
+                            href=&#x22;https://www.gamblingcommission.gov.uk/Footer/Privacy-and-cookies.aspx&#x22;
+                            target=&#x22;_Blank&#x22; rel=&#x22;noopener&#x22;&#x3E;
+                            Privacy and cookies
+                        &#x3C;/a&#x3E;
+                    &#x3C;/li&#x3E;
+                    &#x3C;li class=&#x22;govuk-footer__inline-list-item&#x22;&#x3E;
+                        &#x3C;a class=&#x22;govuk-footer__link&#x22;
+                            href=&#x22;https://www.gamblingcommission.gov.uk/Footer/Terms-and-conditions.aspx&#x22;
+                            target=&#x22;_Blank&#x22; rel=&#x22;noopener&#x22;&#x3E;
+                            Terms and conditions
+                        &#x3C;/a&#x3E;
+                    &#x3C;/li&#x3E;
+                &#x3C;/ul&#x3E;
+                &#x3C;span class=&#x22;gc-footer-sub&#x22;&#x3E;
+                    Built by the Gambling Commission Digital Team
+                &#x3C;/span&#x3E;
+            &#x3C;/div&#x3E;
+        &#x3C;/div&#x3E;
+    &#x3C;/div&#x3E;
+&#x3C;/footer&#x3E;</code>
                     </pre>
                     </div>
                 </section>
@@ -87,22 +135,25 @@ gc-header-hero
 
             <h2 class="govuk-heading-l">When to use this component</h2>
             <p class="govuk-body">
-                [tk]
+                    Use the footer at the bottom of every page of your service.
             </p>
 
-            <h2 class="govuk-heading-l">When not to use this component</h2>
-            <p class="govuk-body">
-                [tk]
-            </p>
+           
 
             <h2 class="govuk-heading-l">How it works</h2>
             <p class="govuk-body">
-                [tk]
+                Add links to:
             </p>
+            <ul class="govuk-list govuk-list--bullet">
+                <li>accessibility statement</li>
+                <li>help and support</li>
+                <li>privacy policy</li>
+                <li>terms and conditions</li>
+            </ul>
 
             <h2 class="govuk-heading-l">Research on this component</h2>
             <p class="govuk-body">
-                [tk]
+                There is no specific research on this component.
             </p>
 
         </div>
