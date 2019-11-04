@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+{{content_page.items[0].fields.pageTitle}}
+{% endblock %}
+
+{% block heroClass %}
+
+{% endblock %}
+
+{% block heroContent %}
+
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+
+
+    <div class="app-pane__body govuk-width-container">
+        <div class="app-pane__subnav app-hide-mobile">
+            <nav class="gc-vertical-nav">
+                <ul class="gc-vertical-nav__section">
+                    {% for i in list_of_pages.items %}
+
+                    {% if i.fields.menuTitle === content_page.items[0].fields.menuTitle %}
+                    <li class="gc-vertical-nav__section-item gc-vertical-nav__section-item--current">
+                        <a class="gc-vertical-nav__link govuk-link"
+                            href="/user-research/content/{{ i.fields.slug }}">{{i.fields.menuTitle}}</a>
+                    </li>
+                    {% else %}
+                    <li class="gc-vertical-nav__section-item">
+                        <a class="gc-vertical-nav__link govuk-link"
+                            href="/user-research/content/{{ i.fields.slug }}">{{i.fields.menuTitle}}</a>
+                    </li>
+                    {% endif %}
+                    {%endfor%}
+                </ul>
+            </nav>
+        </div>
+
+        <div class="app-pane__content">
+            <h1 class="govuk-heading-l">{{content_page.items[0].fields.pageTitle}}</h1>
+
+            <p class="govuk-body">
+                {% markdown %}
+                {{content_page.items[0].fields.details | safe}}
+                {% endmarkdown %}</p>
+
+
+        </div>
+
+    </div>
+
+</div>
+{% endblock %}

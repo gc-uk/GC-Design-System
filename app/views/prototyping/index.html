@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Getting started
+{% endblock %}
+
+{% block heroClass %}
+
+{% endblock %}
+
+{% block heroContent %}
+
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-l">Prototyping</h1>
+            <p class="govuk-body">This guide helps you to create prototypes of Gambling Commission services using the
+                Design System</p>
+            <h2 class="govuk-heading-m">Before you start</h2>
+            <p class="govuk-body">You'll need to request the following software to be installed through an IT Helpdesk
+                request, before you
+                can build and run any prototypes.</p>
+
+            <ul class="govuk-list govuk-list--bullet">
+                <li>Install <a href="https://nodejs.org/" target="_Blank">Node.js</a> LTS version</li>
+                <li>Install <a href="https://gitforwindows.org/" target="_Blank">Git Bash</a></li>
+                <li>Install <a href="https://code.visualstudio.com/" target="_Blank">VSCode</a></li>
+            </ul>
+
+            <p class="govuk-body">If you want to publish prototypes, you'll also need to:</p>
+            <ul class="govuk-list govuk-list--bullet">
+                <li>Create an account on <a href="https://github.com/" target="_Blank">GitHub</a></li>
+                <li>Create an account on <a href="https://heroku.com/" target="_Blank">Heroku</a></li>
+            </ul>
+
+            <h2 class="govuk-heading-m">Downloading the kit</h2>
+            <p class="govuk-body">Download the latest release of the <a
+                    href="https://github.com/gc-uk/gc-prototype-kit/releases" target="_Blank">GC Prototype Kit</a> (link opens in a new window) from
+                the GitHub repository.</p>
+            <p class="govuk-body">Unzip the release into a folder on your C drive. Do not extract to a folder which is
+                synced with OneDrive or Sharepoint.</p>
+
+            <h2 class="govuk-heading-m">Install and run the kit</h2>
+            <p class="govuk-body">Open the folder containing the extracted files in VS Code.</p>
+            <p class="govuk-body">Check the VSCode terminal is set to bash.</p>
+            <p class="govuk-body">In the terminal run:</p>
+            <pre><code class="JavaScript">npm install</code></pre>
+            <p class="govuk-body">When the install has finished, run:</p>
+            <pre><code class="JavaScript">npm start</code></pre>
+            <p class="govuk-body">Follow the link to the URL provided in the terminal, you should see the prototype kit
+                homepage.</p>
+
+            <h2 class="govuk-heading-m">Quit the kit</h2>
+            <p class="govuk-body">In the terminal, press CTRL+C together, this will stop the kit running.</p>
+
+            <h2 class="govuk-heading-m">Restarting the kit</h2>
+            <pre><code class="JavaScript">npm start</code></pre>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

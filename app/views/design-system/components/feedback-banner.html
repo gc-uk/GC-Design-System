@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Hero
+Feedback banner
 {% endblock %}
 
 {% block heroClass %}
@@ -10,12 +10,12 @@ gc-header-hero
 
 {% block heroContent %}
 <nav class="app-navigation govuk-clearfix">
-        <ul class="app-navigation__list govuk-width-container">
-    
-            {% include "../../includes/design-main-nav.html" %}
-    
-        </ul>
-    </nav>
+    <ul class="app-navigation__list govuk-width-container">
+
+        {% include "../../includes/design-main-nav.html" %}
+
+    </ul>
+</nav>
 {% endblock %}
 
 {% block beforeContent %}
@@ -32,10 +32,19 @@ gc-header-hero
         </div>
 
         <div class="app-pane__content">
-            <h1 class="govuk-heading-xl">Hero</h1>
+            <h1 class="govuk-heading-xl">Feedback banner</h1>
             <p class="govuk-body">
-                explanation
+               Provides a means for users to provide feedback in live services.
             </p>
+
+            <p class="govuk-body">
+                    We must <a href="https://www.gov.uk/service-manual/measuring-success" target="_blank">measure success</a> of services and provide a means for users to submit feedback about a service, in line with the Service manual.
+                 </p>
+            
+
+            <p class="govuk-body">
+                    For services which are in Beta, use the <a href="/design-system/components/beta-banner">Beta banner</a> instead.
+                </p>
 
             <div class="govuk-tabs" data-module="govuk-tabs">
                 <h2 class="govuk-tabs__title">
@@ -56,29 +65,20 @@ gc-header-hero
                 </ul>
                 <section class="govuk-tabs__panel" id="past-day">
 
-                    <nav class="gc-vertical-nav">
-                        <ul class="gc-vertical-nav__section">
-                            <li class="gc-vertical-nav__section-item {{alert-c-nav-active}}">
-                                <a class="gc-vertical-nav__link " href="#">Alert</a>
-                            </li>
-                        </ul>
-                    </nav>
+                        <div class="gc-feedback-banner">
+                                <div class=" govuk-width-container">
+                                   <a href="/feedback/">Give us feedback</a> and help make this website better.
+                                </div>
+                            </div>
 
                 </section>
                 <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week">
                     <div class="app-tabs__container">
-                        <pre>
-                            <code class="html">
-&#x3C;nav class=&#x22;gc-vertical-nav&#x22;&#x3E;
-&#x3C;ul class=&#x22;gc-vertical-nav__section&#x22;&#x3E;
-
-    &#x3C;li class=&#x22;gc-vertical-nav__section-item {{alert-c-nav-active}}&#x22;&#x3E;
-        &#x3C;a class=&#x22;gc-vertical-nav__link &#x22; href=&#x22;#&#x22;&#x3E;Alert&#x3C;/a&#x3E;
-    &#x3C;/li&#x3E;
-&#x3C;/ul&#x3E;
-&#x3C;/nav&#x3E;
-                        </code>
-                    </pre>
+                        <pre><code class="html">&#x3C;div class=&#x22;gc-feedback-banner&#x22;&#x3E;
+    &#x3C;div class=&#x22; govuk-width-container&#x22;&#x3E;
+       &#x3C;a href=&#x22;/feedback/&#x22;&#x3E; give us feedback&#x3C;/a&#x3E; and help make this website better.
+    &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;</code></pre>
                     </div>
                 </section>
 
@@ -87,23 +87,28 @@ gc-header-hero
 
             <h2 class="govuk-heading-l">When to use this component</h2>
             <p class="govuk-body">
-                [tk]
+                Use when a service is officially live to allow users to provide feedback about the service.
             </p>
 
             <h2 class="govuk-heading-l">When not to use this component</h2>
             <p class="govuk-body">
-                [tk]
-            </p>
+                Don't use this component on services which are in Beta, use the <a href="/design-system/components/beta-banner">Beta banner</a> instead.
+
+            </p>           
 
             <h2 class="govuk-heading-l">How it works</h2>
             <p class="govuk-body">
-                [tk]
+                    The feedback banner is used on all live services and appears at the top of all pages before the header. 
+                </p>
+            <p class="govuk-body">
+               The component contains a link to the service feedback page. 
             </p>
 
             <h2 class="govuk-heading-l">Research on this component</h2>
             <p class="govuk-body">
-                [tk]
+                There has not been any specific research activity on this component.
             </p>
+        
 
         </div>
 

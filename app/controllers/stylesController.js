@@ -1,11 +1,20 @@
 var express = require('express');
 var router = express.Router();
 
-exports.vertical_nav = function (req, res) {
+var designsystemnavactive = 'govuk-header__navigation-item--active';
+
+exports.typography = function (req, res) {
     
-    var verticalCNavActive = 'gc-vertical-nav__section-item--current';
-    res.render("design-system/components/vertical-nav",{
-        verticalCNavActive
+      res.render("design-system/styles/typography",{
+        designsystemnavactive
+    });
+}
+
+
+
+exports.page = function (req, res) {
+        res.render("design-system/styles/page",{    
+        designsystemnavactive
     });
 }
 

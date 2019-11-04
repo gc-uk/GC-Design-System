@@ -1,0 +1,362 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Page template
+{% endblock %}
+
+{% block heroClass %}
+gc-header-hero
+{% endblock %}
+
+{% block heroContent %}
+<nav class="app-navigation govuk-clearfix">
+    <ul class="app-navigation__list govuk-width-container">
+        <li class="app-navigation__list-item">
+            <a class="govuk-link govuk-link--no-visited-state app-navigation__link" href="/design-system/"
+              data-topnav="Styles">Guidance</a>
+          </li>
+
+        <li class="app-navigation__list-item  app-navigation__list-item--current">
+            <a class="govuk-link govuk-link--no-visited-state app-navigation__link" href="/design-system/styles/"
+                data-topnav="Styles">Styles</a>
+        </li>
+
+        <li class="app-navigation__list-item">
+            <a class="govuk-link govuk-link--no-visited-state app-navigation__link" href="/design-system/components/"
+                data-topnav="Components">Components</a>
+        </li>
+
+        <li class="app-navigation__list-item">
+            <a class="govuk-link govuk-link--no-visited-state app-navigation__link" href="/design-system/patterns/"
+                data-topnav="Patterns">Patterns</a>
+        </li>
+
+
+
+    </ul>
+</nav>
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+
+
+    <div class="app-pane__body govuk-width-container">
+        <div class="app-pane__subnav app-hide-mobile">
+            {% include "../../includes/styles-nav.html" %}
+        </div>
+
+        <div class="app-pane__content">
+            <h1 class="govuk-heading-l">Page template</h1>
+            <p class="govuk-body">Use this page template to keep pages consistent across services.</p>
+            <p class="govuk-body">This template includes the basic markup to render a standard page. It also includes:</p>
+            <ul class="govuk-list govuk-list--bullet">
+                <li>JavaScript that adds <code>.js-enabled</code> class which is required for JavaScript enabled components</li>
+                <li>The skip link, header and footer</li>
+                <li>Favicon and app icons</li>
+            </ul>
+
+
+            <!DOCTYPE html>
+<html lang="en" class="govuk-template app-html-class">
+
+<head>
+
+    <meta charset="utf-8" />
+    <title>Gambling Commission</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <link rel="apple-touch-icon" sizes="57x57" href="https://gc-frontend-cdn.herokuapp.com/public/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://gc-frontend-cdn.herokuapp.com/public/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://gc-frontend-cdn.herokuapp.com/public/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://gc-frontend-cdn.herokuapp.com/public/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://gc-frontend-cdn.herokuapp.com/public/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://gc-frontend-cdn.herokuapp.com/public/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://gc-frontend-cdn.herokuapp.com/public/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://gc-frontend-cdn.herokuapp.com/public/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://gc-frontend-cdn.herokuapp.com/public/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="https://gc-frontend-cdn.herokuapp.com/public/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://gc-frontend-cdn.herokuapp.com/public/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="https://gc-frontend-cdn.herokuapp.com/public/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://gc-frontend-cdn.herokuapp.com/public/favicon-16x16.png">
+    <link rel="manifest" href="https://gc-frontend-cdn.herokuapp.com/public/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="https://gc-frontend-cdn.herokuapp.com/public/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="shortcut icon" sizes="16x16 32x32 48x48" href="https://gc-frontend-cdn.herokuapp.com/public/images/favicon.ico" type="image/x-icon">
+    <!--[if !IE 8]><!-->
+    <link href="https://gc-frontend-cdn.herokuapp.com/public/stylesheets/application.css" rel="stylesheet" />
+    <!--<![endif]-->
+
+    <!--[if IE 8]>
+    <link href="https://gc-frontend-cdn.herokuapp.com/public/stylesheets/application-ie8.css" rel="stylesheet" />
+  <![endif]-->
+
+    <!--[if lt IE 9]>
+    <script src="/html5-shiv/html5shiv.js"></script>
+  <![endif]-->
+
+
+    <meta name="author" content="Gambling Commission Digital Team" />
+    <meta name="copyright" content="Gambling Commission" />
+
+</head>
+
+<body class="govuk-template__body app-body-class">
+    <script>
+        document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
+    </script>
+    <section>
+        <a href="#main-content" class="govuk-skip-link">Skip to main content</a>
+
+      <!-- Beta Banner Here -->
+    </section>
+    <header class="gc-header" role="banner" data-module="govuk-header">
+        <div class="gc-header-container govuk-width-container">
+            <div class="gc-header-logo">
+                <a href="/" target="_Blank" rel="noopener"><span
+                        class="govuk-visually-hidden">Go to the Gambling Commission website, link opens in a new
+                        window.</span>
+                    <img src="https://gc-frontend-cdn.herokuapp.com/public/images/logo.png" class="gc-logo"
+                        alt="Gambling Commission logo">
+                </a>
+            </div>
+            <div class="gc-header-content">
+                <a href="/" class="gc-header-service-name">
+                    Service name
+                </a>
+                <button type="button" role="button" class="govuk-header__menu-button govuk-js-header-toggle"
+                    aria-controls="navigation" aria-label="Show or hide Top Level Navigation">Menu</button>
+                <nav>
+                    <ul id="navigation" class="govuk-header__navigation " aria-label="Top Level Navigation">
+                        <li class="govuk-header__navigation-item">
+                            <a class="govuk-header__link" href="/">
+                                Navigation
+                            </a>
+                        </li>                      
+                        
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+
+  <!-- Hero Placeholder Here -->
+    <section>
+        <div class="govuk-width-container">
+  <!-- Pre-Content Here Back links etc-->
+        </div>
+    </section>
+    <main class="govuk-main-wrapper app-main-class" id="main-content" role="main">
+        <div class="govuk-width-container">
+        
+	</div>
+    </main>
+    <section>
+        <div class="gc-footer-top">
+            <div class="govuk-width-container">
+                <a class="gc-return-to-top" href="#">
+                    Back to top <span class="govuk-visually-hidden">of the page</span></a>
+            </div>
+        </div>
+    </section>
+    <footer class="gc-footer " role="contentinfo">
+        <div class="govuk-width-container ">
+            <div class="govuk-footer__meta">
+                <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+                    <h3 class="govuk-visually-hidden">Support links</h3>
+                    <ul class="govuk-footer__inline-list">
+                        <li class="govuk-footer__inline-list-item">
+                            <a class="govuk-footer__link" href="/accessibility" target="_Blank" rel="noopener">
+                                Accessibility statement
+                            </a>
+                        </li>
+                        <li class="govuk-footer__inline-list-item">
+                            <a class="govuk-footer__link"
+                                href="https://www.gamblingcommission.gov.uk/Footer/Privacy-and-cookies.aspx"
+                                target="_Blank" rel="noopener">
+                                Privacy and cookies
+                            </a>
+                        </li>
+                        <li class="govuk-footer__inline-list-item">
+                            <a class="govuk-footer__link"
+                                href="https://www.gamblingcommission.gov.uk/Footer/Terms-and-conditions.aspx"
+                                target="_Blank" rel="noopener">
+                                Terms and conditions
+                            </a>
+                        </li>
+                    </ul>
+                    <span class="gc-footer-sub">
+                        Built by the Gambling Commission Digital Team
+                    </span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://gc-frontend-cdn.herokuapp.com/public/javascripts/jquery-1.11.3.js"></script>
+    <script src="https://gc-frontend-cdn.herokuapp.com/public/javascripts/all.js"></script>
+    <script src="https://gc-frontend-cdn.herokuapp.com/public/javascripts/application.js"></script>
+</body>
+
+</html>
+
+            <pre><code>&#x3C;!DOCTYPE html&#x3E;
+&#x3C;html lang=&#x22;en&#x22; class=&#x22;govuk-template app-html-class&#x22;&#x3E;
+
+&#x3C;head&#x3E;
+
+    &#x3C;meta charset=&#x22;utf-8&#x22; /&#x3E;
+    &#x3C;title&#x3E;Gambling Commission&#x3C;/title&#x3E;
+    &#x3C;meta name=&#x22;description&#x22; content=&#x22;&#x22;&#x3E;
+    &#x3C;meta name=&#x22;viewport&#x22; content=&#x22;width=device-width, initial-scale=1, viewport-fit=cover&#x22;&#x3E;
+    &#x3C;meta http-equiv=&#x22;X-UA-Compatible&#x22; content=&#x22;IE=edge&#x22; /&#x3E;
+        &#x3C;link rel=&#x22;apple-touch-icon&#x22; sizes=&#x22;57x57&#x22; href=&#x22;https://gc-frontend-cdn.herokuapp.com/public/apple-icon-57x57.png&#x22;&#x3E;
+    &#x3C;link rel=&#x22;apple-touch-icon&#x22; sizes=&#x22;60x60&#x22; href=&#x22;https://gc-frontend-cdn.herokuapp.com/public/apple-icon-60x60.png&#x22;&#x3E;
+    &#x3C;link rel=&#x22;apple-touch-icon&#x22; sizes=&#x22;72x72&#x22; href=&#x22;https://gc-frontend-cdn.herokuapp.com/public/apple-icon-72x72.png&#x22;&#x3E;
+    &#x3C;link rel=&#x22;apple-touch-icon&#x22; sizes=&#x22;76x76&#x22; href=&#x22;https://gc-frontend-cdn.herokuapp.com/public/apple-icon-76x76.png&#x22;&#x3E;
+    &#x3C;link rel=&#x22;apple-touch-icon&#x22; sizes=&#x22;114x114&#x22; href=&#x22;https://gc-frontend-cdn.herokuapp.com/public/apple-icon-114x114.png&#x22;&#x3E;
+    &#x3C;link rel=&#x22;apple-touch-icon&#x22; sizes=&#x22;120x120&#x22; href=&#x22;https://gc-frontend-cdn.herokuapp.com/public/apple-icon-120x120.png&#x22;&#x3E;
+    &#x3C;link rel=&#x22;apple-touch-icon&#x22; sizes=&#x22;144x144&#x22; href=&#x22;https://gc-frontend-cdn.herokuapp.com/public/apple-icon-144x144.png&#x22;&#x3E;
+    &#x3C;link rel=&#x22;apple-touch-icon&#x22; sizes=&#x22;152x152&#x22; href=&#x22;https://gc-frontend-cdn.herokuapp.com/public/apple-icon-152x152.png&#x22;&#x3E;
+    &#x3C;link rel=&#x22;apple-touch-icon&#x22; sizes=&#x22;180x180&#x22; href=&#x22;https://gc-frontend-cdn.herokuapp.com/public/apple-icon-180x180.png&#x22;&#x3E;
+    &#x3C;link rel=&#x22;icon&#x22; type=&#x22;image/png&#x22; sizes=&#x22;192x192&#x22;  href=&#x22;https://gc-frontend-cdn.herokuapp.com/public/android-icon-192x192.png&#x22;&#x3E;
+    &#x3C;link rel=&#x22;icon&#x22; type=&#x22;image/png&#x22; sizes=&#x22;32x32&#x22; href=&#x22;https://gc-frontend-cdn.herokuapp.com/public/favicon-32x32.png&#x22;&#x3E;
+    &#x3C;link rel=&#x22;icon&#x22; type=&#x22;image/png&#x22; sizes=&#x22;96x96&#x22; href=&#x22;https://gc-frontend-cdn.herokuapp.com/public/favicon-96x96.png&#x22;&#x3E;
+    &#x3C;link rel=&#x22;icon&#x22; type=&#x22;image/png&#x22; sizes=&#x22;16x16&#x22; href=&#x22;https://gc-frontend-cdn.herokuapp.com/public/favicon-16x16.png&#x22;&#x3E;
+    &#x3C;link rel=&#x22;manifest&#x22; href=&#x22;https://gc-frontend-cdn.herokuapp.com/public/manifest.json&#x22;&#x3E;
+    &#x3C;meta name=&#x22;msapplication-TileColor&#x22; content=&#x22;#ffffff&#x22;&#x3E;
+    &#x3C;meta name=&#x22;msapplication-TileImage&#x22; content=&#x22;https://gc-frontend-cdn.herokuapp.com/public/ms-icon-144x144.png&#x22;&#x3E;
+    &#x3C;meta name=&#x22;theme-color&#x22; content=&#x22;#ffffff&#x22;&#x3E;
+    &#x3C;link rel=&#x22;shortcut icon&#x22; sizes=&#x22;16x16 32x32 48x48&#x22; href=&#x22;https://gc-frontend-cdn.herokuapp.com/public/images/favicon.ico&#x22; type=&#x22;image/x-icon&#x22;&#x3E;
+    &#x3C;!--[if !IE 8]&#x3E;&#x3C;!--&#x3E;
+    &#x3C;link href=&#x22;https://gc-frontend-cdn.herokuapp.com/public/stylesheets/application.css&#x22; rel=&#x22;stylesheet&#x22; /&#x3E;
+    &#x3C;!--&#x3C;![endif]--&#x3E;
+
+    &#x3C;!--[if IE 8]&#x3E;
+    &#x3C;link href=&#x22;https://gc-frontend-cdn.herokuapp.com/public/stylesheets/application-ie8.css&#x22; rel=&#x22;stylesheet&#x22; /&#x3E;
+    &#x3C;![endif]--&#x3E;
+
+    &#x3C;!--[if lt IE 9]&#x3E;
+    &#x3C;script src=&#x22;/html5-shiv/html5shiv.js&#x22;&#x3E;&#x3C;/script&#x3E;
+    &#x3C;![endif]--&#x3E;
+
+
+    &#x3C;meta name=&#x22;author&#x22; content=&#x22;Gambling Commission Digital Team&#x22; /&#x3E;
+    &#x3C;meta name=&#x22;copyright&#x22; content=&#x22;Gambling Commission&#x22; /&#x3E;
+
+&#x3C;/head&#x3E;
+
+&#x3C;body class=&#x22;govuk-template__body app-body-class&#x22;&#x3E;
+    &#x3C;script&#x3E;
+        document.body.className = ((document.body.className) ? document.body.className + &#x27; js-enabled&#x27; : &#x27;js-enabled&#x27;);
+    &#x3C;/script&#x3E;
+    &#x3C;section&#x3E;
+        &#x3C;a href=&#x22;#main-content&#x22; class=&#x22;govuk-skip-link&#x22;&#x3E;Skip to main content&#x3C;/a&#x3E;
+
+        &#x3C;!-- Beta Banner Here --&#x3E;
+    &#x3C;/section&#x3E;
+    &#x3C;header class=&#x22;gc-header&#x22; role=&#x22;banner&#x22; data-module=&#x22;govuk-header&#x22;&#x3E;
+        &#x3C;div class=&#x22;gc-header-container govuk-width-container&#x22;&#x3E;
+            &#x3C;div class=&#x22;gc-header-logo&#x22;&#x3E;
+                &#x3C;a href=&#x22;/&#x22; target=&#x22;_Blank&#x22; rel=&#x22;noopener&#x22;&#x3E;&#x3C;span
+                        class=&#x22;govuk-visually-hidden&#x22;&#x3E;Go to the Gambling Commission website, link opens in a new
+                        window.&#x3C;/span&#x3E;
+                    &#x3C;img src=&#x22;https://gc-frontend-cdn.herokuapp.com/public/images/logo.png&#x22; class=&#x22;gc-logo&#x22;
+                        alt=&#x22;Gambling Commission logo&#x22;&#x3E;
+                &#x3C;/a&#x3E;
+            &#x3C;/div&#x3E;
+            &#x3C;div class=&#x22;gc-header-content&#x22;&#x3E;
+                &#x3C;a href=&#x22;/&#x22; class=&#x22;gc-header-service-name&#x22;&#x3E;
+                    Service name
+                &#x3C;/a&#x3E;
+                &#x3C;button type=&#x22;button&#x22; role=&#x22;button&#x22; class=&#x22;govuk-header__menu-button govuk-js-header-toggle&#x22;
+                    aria-controls=&#x22;navigation&#x22; aria-label=&#x22;Show or hide Top Level Navigation&#x22;&#x3E;Menu&#x3C;/button&#x3E;
+                &#x3C;nav&#x3E;
+                    &#x3C;ul id=&#x22;navigation&#x22; class=&#x22;govuk-header__navigation &#x22; aria-label=&#x22;Top Level Navigation&#x22;&#x3E;
+                        &#x3C;li class=&#x22;govuk-header__navigation-item&#x22;&#x3E;
+                            &#x3C;a class=&#x22;govuk-header__link&#x22; href=&#x22;/&#x22;&#x3E;
+                                Navigation
+                            &#x3C;/a&#x3E;
+                        &#x3C;/li&#x3E;                      
+                        
+                    &#x3C;/ul&#x3E;
+                &#x3C;/nav&#x3E;
+            &#x3C;/div&#x3E;
+        &#x3C;/div&#x3E;
+    &#x3C;/header&#x3E;
+
+
+    &#x3C;!-- Hero Placeholder Here --&#x3E;
+    &#x3C;section&#x3E;
+        &#x3C;div class=&#x22;govuk-width-container&#x22;&#x3E;
+    &#x3C;!-- Pre-Content Here Back links etc--&#x3E;
+        &#x3C;/div&#x3E;
+    &#x3C;/section&#x3E;
+    &#x3C;main class=&#x22;govuk-main-wrapper app-main-class&#x22; id=&#x22;main-content&#x22; role=&#x22;main&#x22;&#x3E;
+        &#x3C;div class=&#x22;govuk-width-container&#x22;&#x3E;
+        
+&#x9;&#x3C;/div&#x3E;
+    &#x3C;/main&#x3E;
+    &#x3C;section&#x3E;
+        &#x3C;div class=&#x22;gc-footer-top&#x22;&#x3E;
+            &#x3C;div class=&#x22;govuk-width-container&#x22;&#x3E;
+                &#x3C;a class=&#x22;gc-return-to-top&#x22; href=&#x22;#&#x22;&#x3E;
+                    Back to top &#x3C;span class=&#x22;govuk-visually-hidden&#x22;&#x3E;of the page&#x3C;/span&#x3E;&#x3C;/a&#x3E;
+            &#x3C;/div&#x3E;
+        &#x3C;/div&#x3E;
+    &#x3C;/section&#x3E;
+    &#x3C;footer class=&#x22;gc-footer &#x22; role=&#x22;contentinfo&#x22;&#x3E;
+        &#x3C;div class=&#x22;govuk-width-container &#x22;&#x3E;
+            &#x3C;div class=&#x22;govuk-footer__meta&#x22;&#x3E;
+                &#x3C;div class=&#x22;govuk-footer__meta-item govuk-footer__meta-item--grow&#x22;&#x3E;
+                    &#x3C;h3 class=&#x22;govuk-visually-hidden&#x22;&#x3E;Support links&#x3C;/h3&#x3E;
+                    &#x3C;ul class=&#x22;govuk-footer__inline-list&#x22;&#x3E;
+                        &#x3C;li class=&#x22;govuk-footer__inline-list-item&#x22;&#x3E;
+                            &#x3C;a class=&#x22;govuk-footer__link&#x22; href=&#x22;/accessibility&#x22; target=&#x22;_Blank&#x22; rel=&#x22;noopener&#x22;&#x3E;
+                                Accessibility statement
+                            &#x3C;/a&#x3E;
+                        &#x3C;/li&#x3E;
+                        &#x3C;li class=&#x22;govuk-footer__inline-list-item&#x22;&#x3E;
+                            &#x3C;a class=&#x22;govuk-footer__link&#x22;
+                                href=&#x22;https://www.gamblingcommission.gov.uk/Footer/Privacy-and-cookies.aspx&#x22;
+                                target=&#x22;_Blank&#x22; rel=&#x22;noopener&#x22;&#x3E;
+                                Privacy and cookies
+                            &#x3C;/a&#x3E;
+                        &#x3C;/li&#x3E;
+                        &#x3C;li class=&#x22;govuk-footer__inline-list-item&#x22;&#x3E;
+                            &#x3C;a class=&#x22;govuk-footer__link&#x22;
+                                href=&#x22;https://www.gamblingcommission.gov.uk/Footer/Terms-and-conditions.aspx&#x22;
+                                target=&#x22;_Blank&#x22; rel=&#x22;noopener&#x22;&#x3E;
+                                Terms and conditions
+                            &#x3C;/a&#x3E;
+                        &#x3C;/li&#x3E;
+                    &#x3C;/ul&#x3E;
+                    &#x3C;span class=&#x22;gc-footer-sub&#x22;&#x3E;
+                        Built by the Gambling Commission Digital Team
+                    &#x3C;/span&#x3E;
+                &#x3C;/div&#x3E;
+            &#x3C;/div&#x3E;
+        &#x3C;/div&#x3E;
+    &#x3C;/footer&#x3E;
+    &#x3C;script src=&#x22;https://gc-frontend-cdn.herokuapp.com/public/javascripts/jquery-1.11.3.js&#x22;&#x3E;&#x3C;/script&#x3E;
+    &#x3C;script src=&#x22;https://gc-frontend-cdn.herokuapp.com/public/javascripts/all.js&#x22;&#x3E;&#x3C;/script&#x3E;
+    &#x3C;script src=&#x22;https://gc-frontend-cdn.herokuapp.com/public/javascripts/application.js&#x22;&#x3E;&#x3C;/script&#x3E;
+&#x3C;/body&#x3E;
+                        
+                        &#x3C;/html&#x3E;</code></pre>
+
+
+        </div>
+
+
+
+    </div>
+
+</div>
+{% endblock %}

@@ -10,31 +10,12 @@ gc-header-hero
 
 {% block heroContent %}
 <nav class="app-navigation govuk-clearfix">
-    <ul class="app-navigation__list govuk-width-container">
-        <li class="app-navigation__list-item">
-            <a class="govuk-link govuk-link--no-visited-state app-navigation__link" href="/design-system/"
-              data-topnav="Styles">Guidance</a>
-          </li>
-
-        <li class="app-navigation__list-item">
-            <a class="govuk-link govuk-link--no-visited-state app-navigation__link" href="/design-system/styles/"
-                data-topnav="Styles">Styles</a>
-        </li>
-
-        <li class="app-navigation__list-item">
-            <a class="govuk-link govuk-link--no-visited-state app-navigation__link" href="/design-system/components/"
-                data-topnav="Components">Components</a>
-        </li>
-
-        <li class="app-navigation__list-item app-navigation__list-item--current">
-            <a class="govuk-link govuk-link--no-visited-state app-navigation__link" href="/design-system/patterns/"
-                data-topnav="Patterns">Patterns</a>
-        </li>
-
-
-
-    </ul>
-</nav>
+        <ul class="app-navigation__list govuk-width-container">
+    
+            {% include "../../includes/design-main-nav.html" %}
+    
+        </ul>
+    </nav>
 {% endblock %}
 
 {% block beforeContent %}

@@ -12,22 +12,7 @@ gc-header-hero
 <nav class="app-navigation govuk-clearfix">
     <ul class="app-navigation__list govuk-width-container">
 
-
-        <li class="app-navigation__list-item">
-            <a class="govuk-link govuk-link--no-visited-state app-navigation__link" href="/design-system/styles/"
-                data-topnav="Styles">Styles</a>
-        </li>
-
-        <li class="app-navigation__list-item app-navigation__list-item--current">
-            <a class="govuk-link govuk-link--no-visited-state app-navigation__link" href="/design-system/components/"
-                data-topnav="Components">Components</a>
-        </li>
-
-        <li class="app-navigation__list-item">
-            <a class="govuk-link govuk-link--no-visited-state app-navigation__link" href="/design-system/patterns/"
-                data-topnav="Patterns">Patterns</a>
-        </li>
-
+        {% include "../../includes/design-main-nav.html" %}
 
     </ul>
 </nav>
@@ -47,9 +32,27 @@ gc-header-hero
         </div>
 
         <div class="app-pane__content">
-            <h1 class="govuk-heading-xl">Promo (cards)</h1>
+            <h1 class="govuk-heading-xl">Cards</h1>
             <p class="govuk-body">
-                explanation
+                Cards are used to display information to users which may include additional functionality such as links
+                or buttons.
+            </p>
+
+            <h2 class="govuk-heading-l">Linked cards</h2>
+            <p class="govuk-body">
+                Linked cards provide users with information and link to more details relating to that card.
+            </p>
+            <p class="govuk-body">
+                Multiple cards can be grouped together and when this is done, all cards will match the hight of the
+                tallest card.
+            </p>
+            <p class="govuk-body">
+                This card should not be used where multiple options may exist for the card's action. Instead, use the
+                linked list card.
+            </p>
+            <p class="govuk-body">
+                These cards must be positioned using the layout classes, for example:
+                <code>govuk-grid-column-one-third</code>.
             </p>
 
             <div class="govuk-tabs" data-module="govuk-tabs">
@@ -71,29 +74,140 @@ gc-header-hero
                 </ul>
                 <section class="govuk-tabs__panel" id="past-day">
 
-                    <nav class="gc-vertical-nav">
-                        <ul class="gc-vertical-nav__section">
-                            <li class="gc-vertical-nav__section-item {{alert-c-nav-active}}">
-                                <a class="gc-vertical-nav__link " href="#">Alert</a>
-                            </li>
-                        </ul>
-                    </nav>
+
+
+                    <div class="govuk-grid-row gc-card-group">
+                        <div class="govuk-grid-column-one-half gc-card-group__item">
+                            <div class="gc-card">
+                                <a class="gc-card__link-wrapper" href="/business/full/1">
+                                    <div class="gc-card__content">
+                                        <h3 class="govuk-heading-s govuk-!-margin-bottom-2">View the full register</h3>
+                                        <p class="gc-card__description">View and filter the full gambling business
+                                            register</p>
+                                        <p class="gc-card__description">{{registerData.NumberOfOperatorRecords}}
+                                            records</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
 
                 </section>
                 <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week">
                     <div class="app-tabs__container">
-                        <pre>
-                            <code class="html">
-&#x3C;nav class=&#x22;gc-vertical-nav&#x22;&#x3E;
-&#x3C;ul class=&#x22;gc-vertical-nav__section&#x22;&#x3E;
+                        <pre><code class="html">&lt;div class=&quot;govuk-grid-row gc-card-group&quot;&gt;
+    &lt;div class=&quot;govuk-grid-column-one-half gc-card-group__item&quot;&gt;
+        &lt;div class=&quot;gc-card&quot;&gt;
+            &lt;a class=&quot;gc-card__link-wrapper&quot; href=&quot;/business/full/1&quot;&gt;
+                &lt;div class=&quot;gc-card__content&quot;&gt;
+                    &lt;h3 class=&quot;govuk-heading-s govuk-!-margin-bottom-2&quot;&gt;View the full register&lt;/h3&gt;
+                    &lt;p class=&quot;gc-card__description&quot;&gt;View and filter the full gambling business
+                        register&lt;/p&gt;
+                    &lt;p class=&quot;gc-card__description&quot;&gt;{{registerData.NumberOfOperatorRecords}}
+                        records&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                </section>
 
-    &#x3C;li class=&#x22;gc-vertical-nav__section-item {{alert-c-nav-active}}&#x22;&#x3E;
-        &#x3C;a class=&#x22;gc-vertical-nav__link &#x22; href=&#x22;#&#x22;&#x3E;Alert&#x3C;/a&#x3E;
-    &#x3C;/li&#x3E;
-&#x3C;/ul&#x3E;
-&#x3C;/nav&#x3E;
-                        </code>
-                    </pre>
+            </div>
+
+            <h2 class="govuk-heading-l">Linked list cards</h2>
+            <p class="govuk-body">
+                Linked list cards provide users with information and a list of links to actions relating to the card.
+            </p>
+            <p class="govuk-body">
+                These cards must be positioned using the layout classes, for example:
+                <code>govuk-grid-column-one-third</code>.
+            </p>
+
+
+            <div class="govuk-tabs" data-module="govuk-tabs">
+                <h2 class="govuk-tabs__title">
+                    Example
+                </h2>
+                <ul class="govuk-tabs__list">
+                    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                        <a class="govuk-tabs__tab" href="#card-2-example">
+                            Example
+                        </a>
+                    </li>
+                    <li class="govuk-tabs__list-item">
+                        <a class="govuk-tabs__tab" href="#card-2-code">
+                            Code
+                        </a>
+                    </li>
+
+                </ul>
+                <section class="govuk-tabs__panel" id="card-2-example">
+                    <div class="govuk-grid-row gc-card-group">
+                        <div class="govuk-grid-column-one-half gc-card-group__item">
+                            <div class="gc-card-with-actions">
+                                <div class="gc-card-with-actions-body">
+                                    <h3 class="govuk-heading-s govuk-!-margin-bottom-2">Event reporting</h3>
+                                    <p class="gc-card__description">2 events reported
+                                </div>
+                                <div class="gc-card-with-actions-action">
+                                    <ul class="govuk-list">
+                                        <li><a class="govuk-link" href="#">Action link</a></li>
+                                        <li><a class="govuk-link" href="#">Action link</a></li>
+                                        <li><a class="govuk-link" href="#">Action link</a></li>
+                                        <li><a class="govuk-link" href="#">Action link</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="govuk-grid-column-one-half gc-card-group__item">
+                            <div class="gc-card-with-actions">
+                                <div class="gc-card-with-actions-body">
+                                    <h3 class="govuk-heading-s govuk-!-margin-bottom-2">Event reporting</h3>
+                                    <p class="gc-card__description">2 events reported
+                                </div>
+                                <div class="gc-card-with-actions-action">
+                                    <ul class="govuk-list">
+                                        <li><a class="govuk-link" href="#">Action link</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="card-2-code">
+                    <div class="app-tabs__container">
+                        <pre><code class="html">&lt;div class=&quot;govuk-grid-row  gc-card-group&quot;&gt;
+    &lt;div class=&quot;govuk-grid-column-one-third  gc-card-group__item&quot;&gt;
+        &lt;div class=&quot;gc-card-with-actions&quot;&gt;
+            &lt;div class=&quot;gc-card-with-actions-body&quot;&gt;
+                &lt;h3 class=&quot;govuk-heading-s govuk-!-margin-bottom-2&quot;&gt;Event reporting&lt;/h3&gt;
+                &lt;p class=&quot;gc-card__description&quot;&gt;2 events reported
+            &lt;/div&gt;
+            &lt;div class=&quot;gc-card-with-actions-action&quot;&gt;
+                &lt;ul class=&quot;govuk-list&quot;&gt;
+                    &lt;li&gt;&lt;a class=&quot;govuk-link&quot; href=&quot;#&quot;&gt;Action link&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a class=&quot;govuk-link&quot; href=&quot;#&quot;&gt;Action link&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;govuk-grid-column-one-third  gc-card-group__item&quot;&gt;
+        &lt;div class=&quot;gc-card-with-actions&quot;&gt;
+            &lt;div class=&quot;gc-card-with-actions-body&quot;&gt;
+                &lt;h3 class=&quot;govuk-heading-s govuk-!-margin-bottom-2&quot;&gt;Event reporting&lt;/h3&gt;
+                &lt;p class=&quot;gc-card__description&quot;&gt;2 events reported
+            &lt;/div&gt;
+            &lt;div class=&quot;gc-card-with-actions-action&quot;&gt;
+                &lt;ul class=&quot;govuk-list&quot;&gt;
+                    &lt;li&gt;&lt;a class=&quot;govuk-link&quot; href=&quot;#&quot;&gt;Action link&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt; </code></pre>
                     </div>
                 </section>
 
@@ -112,7 +226,7 @@ gc-header-hero
 
             <h2 class="govuk-heading-l">How it works</h2>
             <p class="govuk-body">
-                [tk]
+                This component uses <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox" target="_blank">Flexbox</a> to ensure that the hights of all cards in the row are the same height. 
             </p>
 
             <h2 class="govuk-heading-l">Research on this component</h2>

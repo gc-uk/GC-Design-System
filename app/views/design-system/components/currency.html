@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-Getting started
+Currency
 {% endblock %}
 
 {% block heroClass %}
@@ -12,22 +12,7 @@ gc-header-hero
 <nav class="app-navigation govuk-clearfix">
     <ul class="app-navigation__list govuk-width-container">
 
-
-        <li class="app-navigation__list-item">
-            <a class="govuk-link govuk-link--no-visited-state app-navigation__link" href="/design-system/styles/"
-                data-topnav="Styles">Styles</a>
-        </li>
-
-        <li class="app-navigation__list-item app-navigation__list-item--current">
-            <a class="govuk-link govuk-link--no-visited-state app-navigation__link" href="/design-system/components/"
-                data-topnav="Components">Components</a>
-        </li>
-
-        <li class="app-navigation__list-item">
-            <a class="govuk-link govuk-link--no-visited-state app-navigation__link" href="/design-system/patterns/"
-                data-topnav="Patterns">Patterns</a>
-        </li>
-
+        {% include "../../includes/design-main-nav.html" %}
 
     </ul>
 </nav>
@@ -49,8 +34,9 @@ gc-header-hero
         <div class="app-pane__content">
             <h1 class="govuk-heading-xl">Currency</h1>
             <p class="govuk-body">
-                explanation
+                Help users enter an amount of money in a specified currency.
             </p>
+
 
             <div class="govuk-tabs" data-module="govuk-tabs">
                 <h2 class="govuk-tabs__title">
@@ -71,29 +57,32 @@ gc-header-hero
                 </ul>
                 <section class="govuk-tabs__panel" id="past-day">
 
-                    <nav class="gc-vertical-nav">
-                        <ul class="gc-vertical-nav__section">
-                            <li class="gc-vertical-nav__section-item {{alert-c-nav-active}}">
-                                <a class="gc-vertical-nav__link " href="#">Alert</a>
-                            </li>
-                        </ul>
-                    </nav>
+                    <div class="govuk-form-group">
+                        <label class="govuk-label" for="amount">
+                            Amount
+                        </label>
+                        <div id="amount-currency" class="govuk-visually-hidden">in pounds</div>
+                        <div class="gc-currency-input">
+                            <div class="gc-currency-input__symbol" aria-hidden="true">&pound;</div>
+                            <input class="govuk-input govuk-input--width-10" id="amount" name="amount" type="text"
+                                aria-describedby="amount-currency " pattern="[0-9]*">
+                        </div>
+
+                    </div>
 
                 </section>
                 <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week">
                     <div class="app-tabs__container">
-                        <pre>
-                            <code class="html">
-&#x3C;nav class=&#x22;gc-vertical-nav&#x22;&#x3E;
-&#x3C;ul class=&#x22;gc-vertical-nav__section&#x22;&#x3E;
-
-    &#x3C;li class=&#x22;gc-vertical-nav__section-item {{alert-c-nav-active}}&#x22;&#x3E;
-        &#x3C;a class=&#x22;gc-vertical-nav__link &#x22; href=&#x22;#&#x22;&#x3E;Alert&#x3C;/a&#x3E;
-    &#x3C;/li&#x3E;
-&#x3C;/ul&#x3E;
-&#x3C;/nav&#x3E;
-                        </code>
-                    </pre>
+                        <pre><code class="html">&lt;div class=&quot;govuk-form-group&quot;&gt;
+    &lt;label class=&quot;govuk-label&quot; for=&quot;amount&quot;&gt;
+    Amount
+    &lt;/label&gt;
+    &lt;div id=&quot;amount-currency&quot; class=&quot;govuk-visually-hidden&quot;&gt;in pounds&lt;/div&gt;
+    &lt;div class=&quot;gc-currency-input&quot;&gt;
+        &lt;div class=&quot;gc-currency-input__symbol&quot; aria-hidden=&quot;true&quot;&gt;&#163;&lt;/div&gt;
+        &lt;input class=&quot;govuk-input govuk-input--width-10&quot; id=&quot;amount&quot; name=&quot;amount&quot; type=&quot;text&quot; aria-describedby=&quot;amount-currency &quot; pattern=&quot;[0-9]*&quot;&gt;
+    &lt;/div&gt;            
+&lt;/div&gt;</code></pre>
                     </div>
                 </section>
 
@@ -102,22 +91,82 @@ gc-header-hero
 
             <h2 class="govuk-heading-l">When to use this component</h2>
             <p class="govuk-body">
-                [tk]
+                Use the currency input component when you need users to tell you an amount of money in a particular
+                currency, for example pounds sterling, euros or dollars.
             </p>
 
-            <h2 class="govuk-heading-l">When not to use this component</h2>
-            <p class="govuk-body">
-                [tk]
-            </p>
+
 
             <h2 class="govuk-heading-l">How it works</h2>
             <p class="govuk-body">
-                [tk]
+                The component uses <code>type="text"</code> rather than <code>type="number"</code> to ensure that all
+                users can enter the decimal symbol. And the pattern attribute is used to trigger a numeric keypad on iOS
+                devices.
             </p>
+
+            <p class="govuk-body">
+                Use HTML entity values for the currency symbols:
+            </p>
+
+            <table class="gc-table govuk-!-margin-bottom-4">
+                <caption class="gc-table__caption">
+                    <p class="govuk-body">Currency symbols</p>
+                </caption>
+                <thead class="gc-table__head">
+                    <tr class="gc-table__row">
+                        <th class="gc-table__header" scope="col">
+                            Symbol
+                        </th>
+                        <th class="gc-table__header " scope="col">
+                            HTML Entity
+                        </th>
+                    </tr>
+                </thead>
+                <tbody class="gc-table__body">
+                    <tr class="gc-table__row">
+                        <td class="gc-table__cell">
+                            £
+                        </td>
+                        <td class="gc-table__cell">
+                            &amp;pound;
+                        </td>
+                    </tr>
+                    <tr class="gc-table__row">
+                            <td class="gc-table__cell">
+                                $
+                            </td>
+                            <td class="gc-table__cell">
+                                &amp;dollar;
+                            </td>
+                        </tr>
+                        <tr class="gc-table__row">
+                                <td class="gc-table__cell">
+                                     €
+                                </td>
+                                <td class="gc-table__cell">
+                                    &amp;euro;
+                                </td>
+                            </tr>
+                </tbody>
+            </table>
+
+            <p class="govuk-body">
+                The input does not prevent users from typing invalid numbers because that makes the interface seem
+                unresponsive. Instead rely on clear labels, hints and error messages.
+            </p>
+            <p class="govuk-body">
+                The currency symbol is styled differently to the input so that users don’t confuse it with the input’s
+                value. </p>
 
             <h2 class="govuk-heading-l">Research on this component</h2>
             <p class="govuk-body">
-                [tk]
+                We tested this component in the Alpha phase of the public register service. The component was used in a
+                service for the legal team to add and manage settlements.
+            </p>
+
+            <h2 class="govuk-heading-l">Where this component is used</h2>
+            <p class="govuk-body">
+                There are no live services using this component.
             </p>
 
         </div>
