@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+Getting started
+{% endblock %}
+
+{% block heroClass %}
+gc-header-hero
+{% endblock %}
+
+{% block heroContent %}
+<nav class="app-navigation govuk-clearfix">
+    <ul class="app-navigation__list govuk-width-container">
+
+        {% include "../../includes/design-main-nav.html" %}
+
+    </ul>
+</nav>
+{% endblock %}
+
+{% block beforeContent %}
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+
+
+    <div class="app-pane__body govuk-width-container">
+        <div class="app-pane__subnav app-hide-mobile">
+            {% include "../../includes/component-patterns.html" %}
+        </div>
+
+        <div class="app-pane__content">
+            <h1 class="govuk-heading-l">Add another</h1>
+            <p class="govuk-body">An interaction that allows a user to add multiple items, check, remove an item or add
+                more if needed.</p>
+            <h2 class="govuk-heading-m">When to use this pattern</h2>
+            <p class="govuk-body">This pattern can be used to add people to an application, add items to a list or
+                uploading files.</p>
+            <h2 class="govuk-heading-m">This can be used:</h2>
+            <ul class="govuk-list govuk-list--bullet">
+                <li>to help confirm an action</li>
+                <li>to allow the user to change their minds</li>
+                <li>when the action is not easily reversible</li>
+                <li>when the completion immediately starts another process</li>
+            </ul>
+
+            <h2 class="govuk-heading-m">Multiple loops should:</h2>
+            <ul class="govuk-list govuk-list--bullet">
+                <li>remember previous choices</li>
+                <li>give clear guidance on the flexibility of choices</li>
+            </ul>
+            <h2 class="govuk-heading-m">Interactions using this pattern</h2>
+            <ul class="govuk-list govuk-list--bullet">
+                <li>Uploading multiple files</li>
+                <li>Adding multiple postal addresses</li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+{% endblock %}

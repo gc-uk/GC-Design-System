@@ -56,18 +56,22 @@ gc-header-hero
                 </ul>
                 <section class="govuk-tabs__panel" id="past-day">
 
-                    <nav class="gc-vertical-nav">
-                        <ul class="gc-vertical-nav__section">
-                            <li class="gc-vertical-nav__section-item {{alert-c-nav-active}}">
-                                <a class="gc-vertical-nav__link " href="#">Alert</a>
-                            </li>
-                        </ul>
-                    </nav>
+<div class="gc-interruption-card">
+    <h2 class="govuk-heading-l">Before you continue</h2>
+    <p class="govuk-body-l">If you continue, you cannot change the information you have provided so far.</p>
+    <p class="govuk-body-l">If you are happy with the information provided, continue.</p>
+    <a href="" class="govuk-button">Continue</a>
+</div>
 
                 </section>
                 <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week">
                     <div class="app-tabs__container">
-                        <pre><code class="html"></code></pre>
+                        <pre><code class="html">&#x3C;div class=&#x22;gc-interruption-card&#x22;&#x3E;
+    &#x3C;h2 class=&#x22;govuk-heading-l&#x22;&#x3E;Before you continue&#x3C;/h2&#x3E;
+    &#x3C;p class=&#x22;govuk-body-l&#x22;&#x3E;If you continue, you cannot change the information you have provided so far.&#x3C;/p&#x3E;
+    &#x3C;p class=&#x22;govuk-body-l&#x22;&#x3E;If you are happy with the information provided, continue.&#x3C;/p&#x3E;
+    &#x3C;a href=&#x22;&#x22; class=&#x22;govuk-button&#x22;&#x3E;Continue&#x3C;/a&#x3E;
+&#x3C;/div&#x3E;</code></pre>
                     </div>
                 </section>
 
@@ -98,7 +102,7 @@ gc-header-hero
 
             <h2 class="govuk-heading-l">Research on this component</h2>
             <p class="govuk-body">
-                [tk]
+                This pattern was tested during the Games Register project with users and was successful in stopping users mid-journey before continuing.
             </p>
 
         </div>
