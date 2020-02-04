@@ -32,8 +32,13 @@ gc-header-hero
             <h1 class="govuk-heading-xl">Vertical navigation</h1>
             <p class="govuk-body">
                 Use the vertical navigation to allow users to access different sections or pages in relation the current
-                page.
+                page. Useful for menus and application navigation.
             </p>
+            <p class="govuk-body">
+                    The menu is an adaptation of the vertical navigation menu on the GOV.UK Design System.
+                </p>
+
+            <h2 class="govuk-heading-m">Basic implementation</h2>
 
             <div class="govuk-tabs" data-module="govuk-tabs">
                 <h2 class="govuk-tabs__title">
@@ -57,7 +62,7 @@ gc-header-hero
                     <nav class="gc-vertical-nav">
                         <ul class="gc-vertical-nav__section">
                             <li class="gc-vertical-nav__section-item {{alert-c-nav-active}}">
-                                <a class="gc-vertical-nav__link " href="#">Alert</a>
+                                <a class="gc-vertical-nav__link " href="#">Domain names</a>
                             </li>
                         </ul>
                     </nav>
@@ -65,33 +70,145 @@ gc-header-hero
                 </section>
                 <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week">
                     <div class="app-tabs__container">
-                        <pre><code class="html"></code></pre>
+                        <pre><code class="html">&#x3C;nav class=&#x22;gc-vertical-nav&#x22;&#x3E;
+    &#x3C;ul class=&#x22;gc-vertical-nav__section&#x22;&#x3E;
+        &#x3C;li class=&#x22;gc-vertical-nav__section-item {{alert-c-nav-active}}&#x22;&#x3E;
+            &#x3C;a class=&#x22;gc-vertical-nav__link &#x22; href=&#x22;#&#x22;&#x3E;Alert&#x3C;/a&#x3E;
+        &#x3C;/li&#x3E;
+    &#x3C;/ul&#x3E;
+&#x3C;/nav&#x3E;</code></pre>
                     </div>
                 </section>
 
             </div>
 
+            <h2 class="govuk-heading-m">Implementation with counts</p>
+            <p>Counts on a menu item indicate if that section contains records. This should only be used where the menu is enabling the user to navigate data driven applications.</p>
+
+         
+            <div class="govuk-tabs" data-module="govuk-tabs">
+                <h2 class="govuk-tabs__title">
+                    Example
+                </h2>
+                <ul class="govuk-tabs__list">
+                    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                        <a class="govuk-tabs__tab" href="#past-dayx">
+                            Example
+                        </a>
+                    </li>
+                    <li class="govuk-tabs__list-item">
+                        <a class="govuk-tabs__tab" href="#past-weekx">
+                            Code
+                        </a>
+                    </li>
+
+                </ul>
+                <section class="govuk-tabs__panel" id="past-dayx">
+
+                    <nav class="gc-vertical-nav">
+                        <ul class="gc-vertical-nav__section">
+                            <li class="gc-vertical-nav__section-item {{alert-c-nav-active}}">
+                                    <span class="gc-vertical-nav--count">4</span>
+                                <a class="gc-vertical-nav__link " href="#">Domain names</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                </section>
+                <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-weekx">
+                    <div class="app-tabs__container">
+                        <pre><code class="html">&#x3C;nav class=&#x22;gc-vertical-nav&#x22;&#x3E;
+    &#x3C;ul class=&#x22;gc-vertical-nav__section&#x22;&#x3E;
+        &#x3C;li class=&#x22;gc-vertical-nav__section-item {{alert-c-nav-active}}&#x22;&#x3E;
+            &#x3C;a class=&#x22;gc-vertical-nav__link &#x22; href=&#x22;#&#x22;&#x3E;Alert&#x3C;/a&#x3E;
+        &#x3C;/li&#x3E;
+    &#x3C;/ul&#x3E;
+&#x3C;/nav&#x3E;</code></pre>
+                    </div>
+                </section>
+
+            </div>
+
+            <h2 class="govuk-heading-m">Selected navigation item</p>
+                <p>Styling on the navigation item to show the user the item is the currently selected menu item.</p>
+                <p>This is achieved by applying the class <code>gc-vertical-nav__section-item--current</code> to the relevant menu item</p>
+    
+             
+                <div class="govuk-tabs" data-module="govuk-tabs">
+                    <h2 class="govuk-tabs__title">
+                        Example
+                    </h2>
+                    <ul class="govuk-tabs__list">
+                        <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                            <a class="govuk-tabs__tab" href="#past-dayx">
+                                Example
+                            </a>
+                        </li>
+                        <li class="govuk-tabs__list-item">
+                            <a class="govuk-tabs__tab" href="#past-weekx">
+                                Code
+                            </a>
+                        </li>
+    
+                    </ul>
+                    <section class="govuk-tabs__panel" id="past-dayx">
+    
+                        <nav class="gc-vertical-nav">
+                            <ul class="gc-vertical-nav__section">
+                                <li class="gc-vertical-nav__section-item gc-vertical-nav__section-item--current">
+                                        <span class="gc-vertical-nav--count">4</span>
+                                    <a class="gc-vertical-nav__link " href="#">Domain names</a>
+                                </li>
+                            </ul>
+                        </nav>
+    
+                    </section>
+                    <section class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-weekx">
+                        <div class="app-tabs__container">
+                            <pre><code class="html">&#x3C;nav class=&#x22;gc-vertical-nav gc-vertical-nav__section-item--current&#x22;&#x3E;
+        &#x3C;ul class=&#x22;gc-vertical-nav__section&#x22;&#x3E;
+            &#x3C;li class=&#x22;gc-vertical-nav__section-item {{alert-c-nav-active}}&#x22;&#x3E;
+                &#x3C;a class=&#x22;gc-vertical-nav__link &#x22; href=&#x22;#&#x22;&#x3E;Alert&#x3C;/a&#x3E;
+            &#x3C;/li&#x3E;
+        &#x3C;/ul&#x3E;
+    &#x3C;/nav&#x3E;</code></pre>
+                        </div>
+                    </section>
+    
+                </div>
+
 
             <h2 class="govuk-heading-l">When to use this component</h2>
             <p class="govuk-body">
-                [tk]
+                Use this component to structure web applications with a vertical navigation.
             </p>
+            <p class="govuk-body">
+                    This component should be placed within a <code>app-pane__subnav</code> or <code>govuk-grid-column-one-third</code> container.
+                </p>
+            <p class="govuk-body">
+                    The menu should be in scope to the information it is representing. For example, in the public register, the menu is used to show domain names, trading names, sanctions and settlements for a selected licensed business.
+                </p>
+
 
             <h2 class="govuk-heading-l">When not to use this component</h2>
             <p class="govuk-body">
-                [tk]
+              Understand first what content is being displayed before considering using this component. It should not be used in standard websites where a contents list might be better used.
             </p>
+
+            
 
             <h2 class="govuk-heading-l">How it works</h2>
             <p class="govuk-body">
-                [tk]
+                Built on the standard <code>ul</code> and <code>li</code> structure so it can be easily navigated and understood by screen readers and keyboard-only users.
             </p>
 
             <h2 class="govuk-heading-l">Research on this component</h2>
             <p class="govuk-body">
-                [tk]
+                This component was developed, iterated and tested during the public register project. Users were very receptive to the menu and it aided navigation of different information in relation to register entries.
             </p>
-
+            <p class="govuk-body">
+               It is also used within this service manual.
+            </p>
         </div>
 
     </div>
